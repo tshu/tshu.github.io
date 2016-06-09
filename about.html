@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Tony | Shu </title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/urku-ico.svg">
+    <link rel="stylesheet" href="assets/css/aurora-pack.min.css">
+    <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
+    <link rel="stylesheet" href="assets/css/urku.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="icon" href="assets/img/favicon.ico">
+  </head>
+  <body class="top-fixed">
+    <header class="ae-container-fluid ae-container-fluid--full rk-header" id="topBar">
+      <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
+      <label for="mobile-menu">
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+      </label>
+      <div class="ae-container-fluid rk-topbar">
+        <h1 class="rk-logo"><a href="index">Tony|Shu</a></h1>
+        <nav class="rk-navigation">
+          <ul class="rk-menu">
+            <li class="rk-menu__item"><a href="index" class="rk-menu__link">Makes</a>
+            </li>
+            <li class="rk-menu__item"><a href="musings" class="rk-menu__link">Musings</a>
+            </li>
+            <li class="active rk-menu__item"><a href="about" class="rk-menu__link">Me</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="ae-container-fluid ae-container-fluid--inner rk-main">
+      <div class="ae-grid au-mb-4">
+        <div class="ae-grid__item item-lg-5 au-pr-2"><img src="assets/img/me.gif" alt="" class="au-mb-3">
+        </div>
+        <div class="ae-grid__item item-lg-7">
+          <h4>A forcing function</h4>
+          <p>Our minds change before we can consciously acknowledge the difference. Ideas reach the other side of the world in seconds, and yet it's our physical existence that simultaneously bottlenecks and gives meaning to almost everything we do. I find myself most concerned with seeking ways to dismiss human shortcomings: those that we're born with and those that are imposed. How can we become faster, stronger, more informed, less distracted when confronted with "hard" limits? Even more importantly, I hope that doing so increases our appreciation of the things we find beautiful.</p>
+        </div>
+        <div class="ae-grid__item item-lg-12">
+          <h4>About me</h4>
+          <p>As a student of both Materials Science and Computer Science, I seek answers mapping between idea space and reality. It's worthwhile to question how two very different things meet and interact, how disturbances in one affect the other. In the past, I've studied polymer crystallization kinetics, composite fiber additive manufacturing techniques, direct metal laser sintering, and healthcare systems optimization at Georgia Tech, Peking University, and SpaceX. My current research is on powered prostheses, which I find highly motivating due to its impact on helping people today and potential for human augmentation in the future.</p>
+        </div>
+        <div class="ae-grid__item item-lg-12" id="skillsCont">
+          <div id="skills">
+            <!DOCTYPE html>
+            <meta charset="utf-8">
+            <style>
+
+            .node circle {
+              fill: #fff;
+              stroke: #E95420;
+              stroke-width: 1.5px;
+            }
+
+            .node {
+              font: 14px Aileron,Helvetica,Arial,sans-serif;
+            }
+
+            .link {
+              fill: none;
+              stroke: #ccc;
+              stroke-width: 1.5px;
+            }
+
+            </style>
+            <link rel="stylesheet" href="assets/css/urku.css">
+            <body>
+            <script src="assets/js/d3.v3.min.js"></script>
+            <script>
+
+            var width = 1248,
+                height = 740;
+
+            var cluster = d3.layout.cluster()
+                .size([height, width - 350]);
+
+            var diagonal = d3.svg.diagonal()
+                .projection(function(d) { return [d.y, d.x]; });
+
+            var svg = d3.select("#skills").append("svg")
+                .attr("width", width)
+                .attr("height", height)
+              .append("g")
+                .attr("transform", "translate(60,0)");
+
+
+            d3.json("assets/js/tonyshu.json", function(error, root) {
+              if (error) throw error;
+
+              var nodes = cluster.nodes(root),
+                  links = cluster.links(nodes);
+
+              var link = svg.selectAll(".link")
+                  .data(links)
+                .enter().append("path")
+                  .attr("class", "link")
+                  .attr("d", diagonal);
+
+              var node = svg.selectAll(".node")
+                  .data(nodes)
+                .enter().append("g")
+                  .attr("class", "node")
+                  .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
+
+              node.append("circle")
+                  .attr("r", 5);
+
+              node.append("text")
+                  .attr("dx", function(d) { return d.children ? 18 : 8; })
+                  .attr("dy", function(d) { return d.children ? -10 : 3; })
+                  .style("text-anchor", function(d) { return d.children ? "end" : "start"; })
+                  .text(function(d) { return d.name; });
+            });
+
+            d3.select(self.frameElement).style("height", height + "px");
+
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <footer class="ae-container-fluid rk-footer ">
+      <div class="ae-grid ae-grid--collapse">
+        <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left">
+          <p class="rk-footer__text rk-footer__copy "> <span class="ae-u-bold">© </span><span class="ae-u-bolder">2016 Tony Shu </span>All Rights Reserved.</p>
+        </div>
+        <div class="ae-grid__item item-lg-4 au-xs-ta-center">
+          <a href="https://www.linkedin.com/in/tonyshu" class="rk-social-btn" target="_blank" style="-webkit-filter:grayscale(100%)">
+          <img src="assets/img/linkedin.gif"></a>
+
+          <a href="https://github.com/tshu" class="rk-social-btn " target="_blank">
+          <img src="assets/img/github.png"></a>
+        </div>
+        <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
+          <p class="rk-footer__text rk-footer__contact "> <span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> <a href="mailto:toekneeshu@gmail.com?subject=Hi Tony!" class="rk-dark-color "> toekneeshu@gmail.com </a></span></p>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+  </body>
+</html>

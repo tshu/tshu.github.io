@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Tony | Shu </title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/urku-ico.svg">
+    <link rel="stylesheet" href="assets/css/aurora-pack.min.css">
+    <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
+    <link rel="stylesheet" href="assets/css/urku.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="icon" href="assets/img/favicon.ico">
+  </head>
+  <body class="top-fixed">
+    <header class="ae-container-fluid ae-container-fluid--full rk-header" id="topBar">
+      <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
+      <label for="mobile-menu">
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+      </label>
+      <div class="ae-container-fluid rk-topbar">
+        <h1 class="rk-logo"><a href="index">Tony|Shu</a></h1>
+        <nav class="rk-navigation">
+          <ul class="rk-menu">
+            <li class="active rk-menu__item"><a href="index" class="rk-menu__link">Makes</a>
+            </li>
+            <li class="rk-menu__item"><a href="musings" class="rk-menu__link">Musings</a>
+            </li>
+            <li class="rk-menu__item"><a href="about" class="rk-menu__link">Me</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="ae-container-fluid rk-main">
+      <div class="ae-container-fluid ae-container-fluid--inner item-inside__meta">
+      <h4> Beauty from inter|faces </h4>
+      <p>A portfolio of my work</p>
+        <div class="ae-masonry ae-masonry-md-2">
+          <button class="rk-item ae-masonry__item button" id="findEDButton"><img src="assets/img/findedHome.jpg" alt="">
+                <div class="item-meta">
+                  <h2>findED.io</h2>
+                  <p>discover your best ER</p>
+                  <p>data|health</p>
+                </div></button>
+            <div id="findEDModal" class="modal">
+              <div class="modal-content">
+                <img src="assets/img/findedResults.jpg">
+                <p>After observing how little access people have to medical treatment statistics, my friends and I decided to address the issue directly. <a href="http://www.finded.io" style="text-decoration:underline" target="_blank">findED.io</a> is a webapp which combines hospital statistics from the Centers for Medicaid and Medicare Services Hospital
+                Quality Initiative along with data from Google Maps and Directions API to rank nearby hospitals by both total time until treatment and overall quality. For this project, my primary contributions were to the front end user experience and data analysis, focusing on ways to quickly convey information to the people who need it the most.
+                </p>
+                <p style="text-decoration:underline"><a href="assets/pdf/finded.pdf" target="_blank"> Winner of the 2016 IISE Southeast Region Technical Paper Competition</a></p>
+              </div>
+            </div>
+          <button class="rk-item ae-masonry__item button" id="recapButton"><img src="assets/img/recap.jpg" alt="">
+                <div class="item-meta">
+                  <h2>Project ReCap</h2>
+                  <p>zirconia recyling initiative</p>
+                  <p>materials|nature</p>
+                </div></button>
+            <div id="recapModal" class="modal">
+                <div class="modal-content">
+                  <img src="assets/img/recapTeeth.jpg">
+                  <p>Over 1 million pounds of high-purity zirconia are thrown away annually as a result of the dental crown milling process, producing needless waste. My senior design team established a viable recycling stream for this material with little to no overhead cost for all industry parties involved.
+                  </p>
+                  <p style="text-decoration:underline"><a href="assets/pdf/recapFinal.pdf" target="_blank">Project Paper</a></p>
+                  <p style="text-decoration:underline"><a href="http://coe.gatech.edu/news/capstone-design-spring-2016-winners" target="_blank"> 1st place Materials Science project at the 2016 Georgia Tech Capstone Expo</a></p>
+                </div>
+            </div>
+          <button class="rk-item ae-masonry__item button" id="banditButton"><img src="assets/img/bandit.jpeg" alt="">
+                <div class="item-meta">
+                  <h2>Bandit</h2>
+                  <p>modular, wearable sensor package</p>
+                  <p>reality|binary</p>
+                </div></button>
+            <div id="banditModal" class="modal">
+              <div class="modal-content">
+                <img src="assets/img/bandit.jpg">
+                <p>Bandit has all the functionality of existing fitness trackers and then some. It houses six completely modular sensor bays large enough for anything from geiger counters to run-of-the-mill accelerometers. With a variety of mounting options a la GoPro, Bandit is the complete sensor package for surfers, rally drivers, triathletes, moms, and nuclear physicists. As project manager, my role consisted of guiding concept development and producing a three sensor prototype capable of sensor hot-swapping.
+                </p>
+                <p><a href="assets/pdf/banditFinal.pdf" target="_blank" style="text-decoration:underline">Project Paper</a></p><p>  <a href="https://github.com/tshu/partModels/blob/master/11.30.SLDPRT" target="_blank" style="text-decoration:underline">Model</a></p>
+              </div>
+            </div>           
+          <button class="rk-item ae-masonry__item button" id="amproButton"><img src="assets/img/ampro3.jpg" alt="">
+                <div class="item-meta">
+                  <h2>AMPRO3</h2>
+                  <p>powered transfemoral prosthesis</p>
+                  <p>man|machine</p>
+                </div></button>
+            <div id="amproModal" class="modal">
+              <div class="modal-content">
+                <img src="assets/img/amproFoot.jpg">
+                <p>As part of the <a href="http://www.bipedalrobotics.com" style="text-decoration:underline" target="_blank">AMBER Lab</a>, most of my time is spent working with AMPRO3, a transfemoral prosthesis featuring actuated knee and ankle joints. Utilizing hybrid nonlinear controls to simulate human walking, AMPRO3 will serve as a platform for future cost of transportation and walking gait studies. Currently, I am developing methods for optical terrain analysis in order to facilitate online gait switching.
+                </p>
+                <p><a href="https://github.com/tshu/optoforce6axis" target="_blank" style="text-decoration:underline"> Source</a> for my custom API used to integrate an OptoForce six-axis load cell with the ankle joint for the measurement of ground reactions.</p>
+              </div>
+            </div>                
+          <button class="rk-item ae-masonry__item button" id="dmlsButton" style="top:1px"><img src="assets/img/dmls.jpg" alt="">
+                <div class="item-meta">
+                  <h2>This thing</h2>
+                  <p>direct metal laser sintering</p>
+                  <p>energy|art</p>
+                </div></button>
+            <div id="dmlsModal" class="modal">
+              <div class="modal-content">
+                <img src="assets/img/cones.jpg">
+                <p>In previous projects, I've optimized direct metal laser sintering techniques for increased component integrity. By examining the microstructure of printed components, relationships can be drawn between printing pattern algorithms and laser energy density. Doing so extends the capabilities of even the most advance printers, making previously impossible overhang angles feasible. With careful refinement, completely spherical shells can be sintered without any interior support.
+                </p>
+              </div>
+            </div>      
+        </div>
+      </div>
+    </section>
+      
+    <footer class="ae-container-fluid rk-footer ">
+      <div class="ae-grid ae-grid--collapse">
+        <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left">
+          <p class="rk-footer__text rk-footer__copy "> <span class="ae-u-bold">© </span><span class="ae-u-bolder">2016 Tony Shu </span>All Rights Reserved.</p>
+        </div>
+        <div class="ae-grid__item item-lg-4 au-xs-ta-center">
+          <a href="https://www.linkedin.com/in/tonyshu" class="rk-social-btn" target="_blank" style="-webkit-filter:grayscale(100%)">
+          <img src="assets/img/linkedin.gif"></a>
+
+          <a href="https://github.com/tshu" class="rk-social-btn" target="_blank">
+          <img src="assets/img/github.png"></a>
+        </div>
+        <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
+          <p class="rk-footer__text rk-footer__contact "> <span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> <a href="mailto:toekneeshu@gmail.com?subject=Hi Tony!" class="rk-dark-color "> toekneeshu@gmail.com </a></span></p>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+    <script src="assets/js/modal.js"></script>
+  </body>
+</html>
