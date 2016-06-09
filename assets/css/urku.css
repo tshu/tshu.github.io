@@ -95,7 +95,7 @@ body {
   font-size: 1.375rem;
   font-weight: 700;
   letter-spacing: 2.25px;
-  margin-left: 33%;
+  text-align: center;
   text-transform: uppercase;
   width: 20%;
 }
@@ -111,7 +111,13 @@ body {
         -ms-flex: 1;
             flex: 1;
     text-align: left;
+    margin-left: 0%;
   }
+}
+@media (max-width: 360px) {
+  .rk-logo {
+  margin-left:33%;
+}
 }
 
 .rk-search {
