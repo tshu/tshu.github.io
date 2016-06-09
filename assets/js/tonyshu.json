@@ -86,7 +86,7 @@
         },
         {"name": "Teaching",
           "children": [
-            {"name": "Resident Hall Advisor"},
+            {"name": "Residence Hall Advisor"},
             {"name": "Materials Characterization Lab Head TA"},
             {"name": "USAA Certified Archery Instructor"}
             ]
