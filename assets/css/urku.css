@@ -114,11 +114,6 @@ body {
     margin-left: 0%;
   }
 }
-@media (max-width: 360px) {
-  .rk-logo {
-  margin-left:33%;
-}
-}
 
 .rk-search {
   -webkit-align-self: flex-start;
