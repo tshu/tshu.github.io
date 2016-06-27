@@ -39,7 +39,10 @@
                 {"name": "git"},
                 {"name": "jQuery"},
                 {"name": "BASH"},
-                {"name": "Machine Learning"}
+                {"name": "Eigen"},
+                {"name": "OpenCV"},
+                {"name": "Machine Learning"},
+                {"name": "Cascade Classifiers"}
                 ]
             }
           ]
@@ -49,7 +52,7 @@
             {"name": "Control",
               "children": [
                 {"name": "Hardware Integration & Communication"},
-                {"name": "BeagleBone Black"},
+                {"name": "BeagleBone Black, RasPi, Arduino"},
                 {"name": "ROS"},
                 {"name": "Nonlinear Control Theory"},
                 {"name": "Linear Control Theory"},
