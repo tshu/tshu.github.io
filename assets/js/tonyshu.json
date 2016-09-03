@@ -5,19 +5,14 @@
       "children": [
         {"name": "Materials",
           "children": [
-            {"name": "XRD"},
-            {"name": "SEM"},
-            {"name": "BET"},
-            {"name": "FTIR"},
-            {"name": "TGA"},
-            {"name": "DMA"},
-            {"name": "DSC"},
+            {"name": "XRD, SEM, BET, FTIR, TGA, DMA, DSC"},
             {"name": "Thin Films/Electronic Materials Fabrication"},
-            {"name": "ASTM Tensile/Compression/Fracture"},
+            {"name": "ASTM Mechanical Testing"},
             {"name": "Photospectroscopy"},
             {"name": "Electrochemical Impedance Spectroscopy"},
             {"name": "Alloy Microstructure Analysis"},
             {"name": "Polymer/Metal/Ceramic Processing"},
+            {"name": "Biomaterial Design"},
             {"name": "Corrosion and Electrochemistry Analysis"},
             {"name": "Mass/Heat Transfer Analysis"}
             ]
@@ -27,22 +22,20 @@
             {"name": "Languages",
               "children": [
                 {"name": "Java"},
-                {"name": "C"},
-                {"name": "C++"},
+                {"name": "C/C++"},
                 {"name": "Python"},
                 {"name": "MATLAB"},
-                {"name": "HTML, CSS, JavaScript"}
+                {"name": "HTML, CSS, JavaScript, jQuery, etc."}
                 ]
             },
             {"name": "Tools",
               "children": [
                 {"name": "git"},
-                {"name": "jQuery"},
-                {"name": "BASH"},
+                {"name": "Linux Utilities"},
                 {"name": "Eigen"},
                 {"name": "OpenCV"},
                 {"name": "Machine Learning"},
-                {"name": "Cascade Classifiers"}
+                {"name": "Knowledge-based AI"}
                 ]
             }
           ]
@@ -51,20 +44,18 @@
           "children": [
             {"name": "Control",
               "children": [
-                {"name": "Hardware Integration & Communication"},
                 {"name": "BeagleBone Black, RasPi, Arduino"},
                 {"name": "ROS"},
-                {"name": "Nonlinear Control Theory"},
-                {"name": "Linear Control Theory"},
+                {"name": "Nonlinear/Linear Control Theory"},
                 {"name": "Simulation & Modeling"}
                 ]
             },
-            {"name": "Mechanical",
+            {"name": "Hardware",
               "children": [
+                {"name": "Sensor Integration & Communication"},
                 {"name": "SolidWorks"},
                 {"name": "Additive Manufacturing"},
-                {"name": "Circuit Design & Soldering"},
-                {"name": "Kinematics"}
+                {"name": "Circuit Design & Analysis"}
                 ]
             }
           ]
@@ -78,21 +69,23 @@
           {"name": "Quadcopters"},
           {"name": "Archery"},
           {"name": "Rock Climbing"},
-          {"name": "Photography & Editing"},
+          {"name": "Photography"},
           {"name": "Solo International Backpacking"},
           {"name": "Flute"},
           {"name": "Audiophilia"},
           {"name": "Car Modification & Maintenance"},
           {"name": "Botany"},
           {"name": "Cooking \"Adventures\""},
-          {"name": "Learning New Algorithms :)"}
+          {"name": "Learning New Algorithms :)"},
+          {"name": "Thinkpad Tinkering"}
           ]
         },
         {"name": "Teaching",
           "children": [
             {"name": "Residence Hall Advisor"},
-            {"name": "Materials Characterization Lab Head TA"},
-            {"name": "USAA Certified Archery Instructor"}
+            {"name": "Materials Characterization/Processing TA"},
+            {"name": "USAA Certified Archery Instructor"},
+            {"name": "AMPRO3 Prosthesis Project Manager"}
             ]
         }
       ]

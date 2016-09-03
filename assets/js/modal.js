@@ -1,3 +1,4 @@
+
 // Get the modal
 var findEDModal = document.getElementById('findEDModal');
 
@@ -5,6 +6,8 @@ var findEDModal = document.getElementById('findEDModal');
 var findEDButton = document.getElementById("findEDButton");
 
 var topBar = document.getElementById("topBar");
+
+var video = document.getElementById("amproVideo");
 
 // When the user clicks on the button, open the modal 
 findEDButton.onclick = function() {
