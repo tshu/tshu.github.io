@@ -231,7 +231,7 @@ body {
 }
 
 .rk-footer {
-  margin-top: 10.5rem;
+  margin-top: 5.5rem;
   margin-bottom: 2rem;
 }
 
@@ -1424,7 +1424,7 @@ body {
 }
 
 .rk-blog__items {
-  margin-bottom: 2.7rem;
+  margin-bottom: 0rem;
 }
 @media (min-width: 40em) {
   .rk-blog__items {
@@ -1466,11 +1466,11 @@ body {
 .blog-meta {
   margin: 0 auto;
   text-align: center;
-  width: 78.5%;
+  width: 97%;
 }
 
 .blog-info {
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 
 .blog-info__title {
@@ -1483,13 +1483,10 @@ body {
 }
 
 .blog-info__excerpt {
-  margin-top: 3.9rem;
+  margin-top: 1rem;
   letter-spacing: .05em;
-  line-height: 1.8125;
+  line-height: 1.6125;
   text-align: left;
-}
-.blog-info__excerpt:not(:empty):after {
-  content: " […]";
 }
 
 .blog-meta {
