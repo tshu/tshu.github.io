@@ -44,7 +44,6 @@
           "children": [
             {"name": "Control",
               "children": [
-                {"name": "BeagleBone Black, RasPi, Arduino"},
                 {"name": "ROS"},
                 {"name": "Nonlinear/Linear Control Theory"},
                 {"name": "Simulation & Modeling"}
@@ -52,6 +51,7 @@
             },
             {"name": "Hardware",
               "children": [
+                {"name": "BeagleBone Black, RasPi, Arduino"},
                 {"name": "Sensor Integration & Communication"},
                 {"name": "SolidWorks"},
                 {"name": "Additive Manufacturing"},
