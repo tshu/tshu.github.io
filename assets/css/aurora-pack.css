@@ -4199,6 +4199,9 @@ select.ae-input--lg {
 }
 
 @media (min-width: 64em) {
+  .au-lg-ptp-0 {
+    padding-top: 4.33%;
+  }
   .au-lg-ptp-1 {
     padding-top: 8.33333%;
   }

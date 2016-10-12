@@ -14,7 +14,10 @@
             {"name": "Polymer/Metal/Ceramic Processing"},
             {"name": "Biomaterial Design"},
             {"name": "Corrosion and Electrochemistry Analysis"},
-            {"name": "Mass/Heat Transfer Analysis"}
+            {"name": "Mass/Heat Transfer Analysis"},
+            {"name": "Direct Metal Laser Sintering"},
+            {"name": "Fused Deposition Modeling"},
+            {"name": "Composite Printing and Weaving"}
             ]
         },
         {"name": "Computer Science",
@@ -31,7 +34,6 @@
             {"name": "Tools",
               "children": [
                 {"name": "git"},
-                {"name": "Linux Utilities"},
                 {"name": "Eigen"},
                 {"name": "OpenCV"},
                 {"name": "Machine Learning"},
@@ -46,15 +48,15 @@
               "children": [
                 {"name": "ROS"},
                 {"name": "Nonlinear/Linear Control Theory"},
-                {"name": "Simulation & Modeling"}
+                {"name": "Kinetic Simulation & Modeling"},
+                {"name": "(Partial) Hybrid Zero Dynamics"}
                 ]
             },
             {"name": "Hardware",
               "children": [
                 {"name": "BeagleBone Black, RasPi, Arduino"},
-                {"name": "Sensor Integration & Communication"},
+                {"name": "USB/USART Sensor Communication"},
                 {"name": "SolidWorks"},
-                {"name": "Additive Manufacturing"},
                 {"name": "Circuit Design & Analysis"}
                 ]
             }
@@ -70,13 +72,13 @@
           {"name": "Archery"},
           {"name": "Rock Climbing"},
           {"name": "Photography"},
-          {"name": "Solo International Backpacking"},
+          {"name": "International Backpacking"},
           {"name": "Flute"},
           {"name": "Audiophilia"},
           {"name": "Car Modification & Maintenance"},
           {"name": "Botany"},
           {"name": "Cooking \"Adventures\""},
-          {"name": "Learning New Algorithms :)"},
+          {"name": "Learning New Algorithms"},
           {"name": "Thinkpad Tinkering"}
           ]
         },
