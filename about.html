@@ -19,6 +19,8 @@ https://www.youtube.com/watch?v=N9XKLqGqwLA -->
     <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
     <link rel="stylesheet" href="assets/css/urku.css">
     <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="assets/css/timeline.css">
+    <link rel="stylesheet" href="assets/css/robot.css">
     <link rel="icon" href="assets/img/favicon.ico">
   </head>
   <body class="top-fixed">
@@ -41,7 +43,7 @@ https://www.youtube.com/watch?v=N9XKLqGqwLA -->
           <ul class="rk-menu">
             <li class="rk-menu__item"><a href="index" class="rk-menu__link">Makes</a>
             </li>
-            <li class="rk-menu__item"><a href="musings" class="rk-menu__link">Musings</a>
+            <li class="rk-menu__item"><a href="muses" class="rk-menu__link">Muses</a>
             </li>
             <li class="active rk-menu__item"><a href="about" class="rk-menu__link">Me</a>
             </li>
@@ -52,11 +54,69 @@ https://www.youtube.com/watch?v=N9XKLqGqwLA -->
 
     <div class="ae-container-fluid ae-container-fluid--inner rk-main">
       <div class="ae-grid au-mb-4">
-        <div class="ae-grid__item item-lg-5 au-pr-2"><img src="assets/img/me.gif" alt="" class="au-mb-3" id="scalar">
+        <div class="ae-grid__item item-lg-5 au-pr-2"><img src="assets/img/me.gif" alt="" class="au-mb-3">
         </div>
         <div class="ae-grid__item item-lg-7">
-          <h4>forcing functions</h4>
-          <p>As both a materials science and computer science major, I play in the mapping between idea space and reality. It's worthwhile to question how two very different things meet and interact, how disturbances in one affect the other. In the past, I've studied polymer crystallization kinetics, composite fiber additive manufacturing techniques, direct metal laser sintering, and healthcare systems optimization at Georgia Tech, Peking University, and SpaceX. My current research is on powered prostheses, and other academic areas of interest include machine learning, knowledge-based AI, neuroprostheses, haptics, and bioinspired design.</p>
+          <p>As someone who studies both materials science and computer science, I play in the mapping between idea space and reality. How do two different systems integrate and interact? How can disturbances in one affect the other? In the past I've investigated polymer crystallization kinetics, various additive manufacturing techniques, and healthcare systems optimization at Georgia Tech, Peking University, and SpaceX. My current research is on powered prostheses, and other academic areas of interest include machine learning, knowledge-based AI, neuroprostheses, haptics, and bioinspired design. When I'm not taking a class, you'll still find me in class because I firmly believe in taking initiative to teach others, but if there are ever a few weeks when the dust settles, chances are I'm already exploring halfway around the world.</p>
+        </div>
+
+        <div class="ae-grid__item item-lg-12">
+          <ul class="timeline-both-side">
+            <li class="default">
+              <div class="border-line"></div>
+              <div class="timeline-description" id="scalar">
+                <img src="assets/img/phb.jpg">
+                <p>In 2013, I studied cellulose nanocrystal/poly-3-hydroxybutyrate composites in the <a href="http://shofnerlab.gatech.edu/" style="text-decoration:underline" target="_blank">Shofner Lab</a>, investigating how processing parameters affected their biodegradability in various environments. From this experience I gained a breadth of expertise in thermal and optical characterization techniques for polymers.</p>
+              </div>
+            </li>
+            <li class="opposite-side">
+              <div class="border-line"></div>
+              <div class="timeline-description">
+                <p>The next year, I worked with <a href="http://www.manufacturing.gatech.edu/dr-ben-wang-executive-director-georgia-tech-manufacturing-institute" style="text-decoration:underline" target="_blank">Dr. Ben Wang</a> to develop novel carbon fiber composite filaments for use in woven additive manufacturing. My semester culminated in producing the first printer prototype designed to simultaneously extrude and weave composite material. Incidentally, this opportunity was also my crash course in circuit design and embedded programming. I found both utterly fascinating and immediately decided to add a computer science major to my materials science degree.</p>
+              </div>
+            </li>
+            <li class="default">
+              <div class="border-line"></div>
+              <div class="timeline-description">
+                <img src="assets/img/sinter.gif" style="width:100%">
+                <p>During the summer of 2014, I worked in materials and processing at SpaceX's Hawthorne site where I investigated the relationship between direct metal laser sintering control patterns and printed Titanium and Inconel superalloys. Partnering with Concept Laser GmbH, I discovered ways of increasing combustion component integrity in terms of laser energy density, location on the print bed, and chamber gas flow.</p>
+              </div>
+            </li>
+            <li class="opposite-side">
+              <div class="border-line"></div>
+              <div class="timeline-description">
+                <img src="assets/img/jump.gif" style="width:100%">
+                <p>After discussing with my colleagues an idea which could help people in emergency situations, I put formal research on hold to pursue developing <a href="http://www.finded.io" style="text-decoration:underline" target="_blank">findED.io</a> as a team. I jumped at my opportunity to improve the healthcare system, and I attribute the success of this project to our team's tenacity.</p>
+              </div>
+            </li>
+            <li class="default">
+              <div class="border-line"></div>
+              <div class="timeline-description">
+                <p>Reflecting on my travels, manufacturing experience, and healthcare app, I envisioned custom robotic prostheses as the perfect intersection of my strengths and interests. In the summer of 2015, I established my own program to study prosthesis design as a visiting researcher with <a href="http://web5.pku.edu.cn/engineering/Faculty/facultyD/Industrial/2868.htm" style="text-decoration:underline" target="_blank">Dr. Qining Wang</a> in the Intelligent Control Lab at Peking University. My work produced a new direct memory access protocol for their universal asynchronous receiver/transmitter communications used to collect prosthesis sensor data, increasing gait cycle control loop speed by 17%. With smoother walking, I saw the true meaning of my work as their device's users gained newfound freedom.</p>
+              </div>
+            </li>
+            <li class="opposite-side">
+              <div class="border-line"></div>
+              <div class="timeline-description">
+              <!-- Huge thanks to web-tiki for the base animation. http://codepen.io/web-tiki/ -->
+              <div id="robot">
+                <div class="head"></div>
+                <div class="arm l"><div><div></div></div></div>
+                <div class="leg l"><div><div></div></div></div>
+                <div class="leg r"><div><div></div></div></div>
+                <div class="arm r"><div><div></div></div></div>
+              </div>
+              <div class="shadow"></div>
+                <p>Since returning, I have worked with <a href="http://www.bipedalrobotics.com/people.html" style="text-decoration:underline" target="_blank">Dr. Aaron Ames</a>, whose research on bipedal walking calls upon biomedical engineering and hybrid zero dynamics. After a year of commitment, I am now the project manager of AMPRO3, a powered prosthesis featuring series elastic actuated knee and ankle joints. I currently investigate novel control algorithms to minimize energy consumption and hardware costs.</p>
+              </div>
+            </li>
+            <li class="default">
+              <div class="border-line"></div>
+              <div class="timeline-description">
+                <p>My mission is to provide people new ways of physically interacting with their environments. Within a year, I will begin my graduate career to gain the perspective I need to assure my vision. Whether through rehabilitation or augmentation, internal or external means, it's time to merge the realm of impossibility into the world of reality.</p>
+              </div>
+            </li>
+          </ul>
         </div>
         
         <div class="ae-grid__item item-lg-12" id="skillsCont">
@@ -72,13 +132,13 @@ https://www.youtube.com/watch?v=N9XKLqGqwLA -->
             }
 
             .node {
-              font: 14px Aileron,Helvetica,Arial,sans-serif;
+              font: 14.5px Aileron,Helvetica,Arial,sans-serif;
             }
 
             .link {
               fill: none;
               stroke: #ccc;
-              stroke-width: 1.5px;
+              stroke-width: 1px;
             }
 
             </style>
@@ -86,7 +146,7 @@ https://www.youtube.com/watch?v=N9XKLqGqwLA -->
             <body>
             <script src="assets/js/d3.v3.min.js"></script>
             <script>
-            if (d3.select("#scalar").node().getBoundingClientRect().width < 470) {
+            if (d3.select("#scalar").node().getBoundingClientRect().width < 400) {
               d3.select("#skills").append('img')
                 .attr('src', 'assets/img/abridged.png');
             } else {
@@ -97,7 +157,7 @@ https://www.youtube.com/watch?v=N9XKLqGqwLA -->
                   .size([height, width - 350]);
 
               var diagonal = d3.svg.diagonal()
-                  .projection(function(d) { return [d.y, d.x]; });
+                  .projection(function(d) { return [d.y-6, d.x]; });
 
               var svg = d3.select("#skills").append("svg")
                   .attr("width", width)
@@ -140,9 +200,7 @@ https://www.youtube.com/watch?v=N9XKLqGqwLA -->
           </div>
         </div>
       </div>
-    </div>
-
-    
+    </div>    
 
     <footer class="ae-container-fluid rk-footer ">
       <div class="ae-grid ae-grid--collapse">
@@ -159,7 +217,7 @@ https://www.youtube.com/watch?v=N9XKLqGqwLA -->
         </div>
         <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
           <p class="rk-footer__text rk-footer__contact "> <span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> <a href="mailto:toekneeshu@gmail.com?subject=Hi Tony!" class="rk-dark-color "> toekneeshu@gmail.com </a></span></p>
-          <p class="rk-footer__text rk-footer__by" style="color:#E95420"><a href="assets/pdf/resumeShu.pdf" class="ae-u-bolder">Résumé</a></p>
+          <p class="rk-footer__text rk-footer__by" style="color:#E95420"><a href="assets/pdf/resumeShu.pdf" class="ae-u-bolder" target="_blank">Résumé</a></p>
         </div>
       </div>
     </footer>
