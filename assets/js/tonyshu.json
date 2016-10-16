@@ -17,6 +17,7 @@
             {"name": "Mass/Heat Transfer Analysis"},
             {"name": "Direct Metal Laser Sintering"},
             {"name": "Fused Deposition Modeling"},
+            {"name": "Stereolithography"},
             {"name": "Composite Printing and Weaving"}
             ]
         },
@@ -79,7 +80,7 @@
           {"name": "Botany"},
           {"name": "Cooking \"Adventures\""},
           {"name": "Learning New Algorithms"},
-          {"name": "Thinkpad Tinkering"}
+          {"name": "ThinkPad Tinkering"}
           ]
         },
         {"name": "Teaching",
