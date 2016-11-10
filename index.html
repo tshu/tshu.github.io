@@ -101,7 +101,7 @@
           <button class="rk-item ae-masonry__item button" id="banditButton"><img src="assets/img/bandit.jpeg" alt="">
                 <div class="item-meta">
                   <h2>Bandit</h2>
-                  <p>modular, wearable sensor package</p>
+                  <p>modular wearable sensor package</p>
                   <p>reality|binary</p>
                 </div></button>
             <div id="banditModal" class="modal">
@@ -129,7 +129,7 @@
                 <div class="rk-blog__items">
 		              <p style="text-align:left; margin: 20px"> Prosthesis technology is quickly catching up to meet the demands of everyday life. As part of the <a href="http://www.bipedalrobotics.com" style="text-decoration:underline" target="_blank">AMBER Lab</a>, I am the project manager of AMPRO3, a transfemoral prosthesis featuring actuated knee and ankle joints. Utilizing a hybrid zero dynamics framework to drive the system toward human-inspired reference trajectories, AMPRO3 will serve as a platform for future cost of transportation and walking gait studies. My team of graduate students is currently developing several novel feedback controllers for the accurate tracking of reference trajectories.</p>
 
-                  <p style="text-align:left; margin: 20px">AMPRO3 is something I've been working on for over a year, and it's one of my favorite projects to date. In addition to making use of the series elastic actuators, relative encoders, motor drivers, interial measurement units, and custom circuitry on the device, I've written a custom API for the six-axis load cell located at the ankle which allows for the measurement of ground reaction forces. I have also experimentally implemented and tuned several theoretical passivity-based, adaptive, and sliding mode controllers in ROS using its on-board BeagleBone Black microcontroller. Our work on this generation of AMPRO has produced a manuscript which will appear in the 2017 American Controls Conference proceedings and another journal manuscript which will be submitted in December 2016.
+                  <p style="text-align:left; margin: 20px">AMPRO3 is something I've been working on for over a year, and the potential of prosthesis research continues to inspire me every day. In addition to making use of the device's series elastic actuators, relative encoders, motor drivers, interial measurement units, and custom circuitry, I've written a custom API for the six-axis load cell located at the ankle which allows for the measurement of ground reaction forces. I have also experimentally implemented and tuned several theoretical passivity-based, adaptive, and sliding mode controllers in ROS using its on-board BeagleBone Black microcontroller. Our work on this generation of AMPRO has produced a manuscript which will appear in the 2017 American Controls Conference proceedings and another journal manuscript which will be submitted in December 2016.
 	                </p>
 	               <!--  <p><a href="assets/pdf/amproControl1.pdf" style="text-decoration:underline" target="_blank">Manuscript submission to the 2017 American Controls Conference</a></p> -->
 	                <p><a href="https://github.com/tshu/optoforce6axis" target="_blank" style="text-decoration:underline"> Source</a> for my custom API used to integrate an OptoForce six-axis load cell with the ankle joint for the measurement of ground reactions.</p>
@@ -147,15 +147,32 @@
               <div class="modal-content">
                 <img src="assets/img/print1.jpg">
                 <img src="assets/img/dice.jpg">
-                <div class="rk-blog__items">
 		            <div class="blog-info">
 		              <p style="text-align:left; margin: 20px"> Examining the microstructure of printed components can yield fundamental relationships between printing pattern algorithms, laser energy density, and structural integrity. In the summer of 2014, I started research at SpaceX where I designed new algorithms to balance energy density gradients for sintering lasers deviating from true focus. I gained hands-on expertise in direct metal laser sintering of Inconel 718 and Ti6Al4V superalloy powders. After several weeks of troubleshooting, I discovered key relationships between processing parameters and component integrity which would make traditionally impossible printing overhang angles feasible. With these new techniques, even completely spherical shells can be sintered without any interior support. 
                 	</p>
                   <p style="text-align:left; margin: 20px"> I also developed a metal powder characterization lab setup to verify the composition of supplier powders. Tests include particle diffraction analysis for size distribution, inductively coupled plasma spectroscopy for composition, and powder flow analysis. Instead of outsourcing these tests, SpaceX saves $150,000 in operating costs every year.
                   </p>
 
-			        </div>
-		        </div> 
+			           </div>
+              </div>
+            </div> 
+
+          <button class="rk-item ae-masonry__item button" id="ravenButton"><img src="assets/img/raven.PNG" alt="">
+                <div class="item-meta">
+                  <h2>Raven's Progressive Matrices</h2>
+                  <p>pattern recognition</p>
+                  <p>vision|intelligence</p>
+                </div>
+          </button>
+            <div id="ravenModal" class="modal">
+              <div class="modal-content">
+                <img src="assets/img/ravenb.PNG">
+                <div class="rk-blog__items">
+                  <p style="text-align:left; margin: 20px"> While machine learning techniques have their place, many patterns cannot be reduced to a feasible feature space. As a project for Dr. Ashok Goel's course on Knowledge-Based AI (of <a href="http://www.businessinsider.com/watson-ai-became-a-teaching-assistant-2016-5" target="_blank" style="text-decoration:underline"> Jill Watson</a> fame), I've created an intelligent agent which uses reasoning to solve Raven's problems. These visual puzzles require the test taker to extract implicit patterns from a series of figures, applying them to select the correct answer from a bank. While these problems are intuitive for humans, a state-of-the-art agent is only correct around 70% of the time.
+                  </p>
+                  <p style="text-align:left; margin: 20px"> On an implementation level using the Pillow library, my agent performs pixel level statistical analysis and gross transformations on the given figures. Tiers of reasoning progress from simple screens of bitmap identity to figure rotations to pixel density matching. Whatever relationships are found are then appropriately implemented either horizontally, vertically, or diagonally. The agent follows up with a generate-and-test approach at the end of each tier to produce a best guess for that tier. Finally, a unified accuracy metric for guess comparison allows the agent to select the best answer choice. Using this strategy, the agent achieves 55% accuracy without relying on any semantic knowledge or object detection.
+                  </p>
+            </div> 
               </div>
             </div>      
 

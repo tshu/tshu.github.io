@@ -42,6 +42,10 @@ window.onclick = function(event) {
         dmlsModal.style.display = "none";
         topBar.style.backgroundColor = "rgba(255,255,255,1)";
     }
+    if (event.target == ravenModal) {
+        ravenModal.style.display = "none";
+        topBar.style.backgroundColor = "rgba(255,255,255,1)";
+    }
 }
 // 
 var amproModal = document.getElementById('amproModal');
@@ -94,4 +98,17 @@ dmlsButton.onclick = function() {
 dmlsModal.onclick = function() {
 	dmlsModal.style.display = "none";
 	topBar.style.backgroundColor = "rgba(255,255,255,1)";
+}
+//
+var ravenModal = document.getElementById('ravenModal');
+var ravenButton = document.getElementById("ravenButton");
+
+ravenButton.onclick = function() {
+    ravenModal.style.display = "block";
+    topBar.style.backgroundColor = "rgba(255,255,255,0.0)";
+}
+
+ravenModal.onclick = function() {
+    ravenModal.style.display = "none";
+    topBar.style.backgroundColor = "rgba(255,255,255,1)";
 }
