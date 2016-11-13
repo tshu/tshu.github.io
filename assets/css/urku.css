@@ -44,7 +44,7 @@ body {
   position: static;
 }
 .top-fixed .rk-main {
-  padding-top: 8.5rem;
+  padding-top: 6.5rem;
 }
 @media (min-width: 64em) {
   .rk-main {
@@ -1983,7 +1983,7 @@ body {
   color: #a0a0a0;
 }
 .rk-menu__link {
-  padding-bottom: 4.2rem;
+  padding-bottom: 2.2rem;
 }
 .rk-menu__sub {
   background-color: white;

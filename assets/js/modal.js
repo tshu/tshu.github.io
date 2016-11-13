@@ -46,6 +46,10 @@ window.onclick = function(event) {
         ravenModal.style.display = "none";
         topBar.style.backgroundColor = "rgba(255,255,255,1)";
     }
+    if (event.target == crystalModal) {
+        crystalModal.style.display = "none";
+        topBar.style.backgroundColor = "rgba(255,255,255,1)";
+    }
 }
 // 
 var amproModal = document.getElementById('amproModal');
@@ -110,5 +114,31 @@ ravenButton.onclick = function() {
 
 ravenModal.onclick = function() {
     ravenModal.style.display = "none";
+    topBar.style.backgroundColor = "rgba(255,255,255,1)";
+}
+//
+var crystalModal = document.getElementById('crystalModal');
+var crystalButton = document.getElementById("crystalButton");
+
+crystalButton.onclick = function() {
+    crystalModal.style.display = "block";
+    topBar.style.backgroundColor = "rgba(255,255,255,0.0)";
+}
+
+crystalModal.onclick = function() {
+    crystalModal.style.display = "none";
+    topBar.style.backgroundColor = "rgba(255,255,255,1)";
+}
+
+var cameraModal = document.getElementById('cameraModal');
+var cameraButton = document.getElementById("cameraButton");
+
+cameraButton.onclick = function() {
+    cameraModal.style.display = "block";
+    topBar.style.backgroundColor = "rgba(255,255,255,0.0)";
+}
+
+cameraModal.onclick = function() {
+    cameraModal.style.display = "none";
     topBar.style.backgroundColor = "rgba(255,255,255,1)";
 }
