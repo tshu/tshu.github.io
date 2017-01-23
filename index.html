@@ -77,29 +77,6 @@
               </div>
             </div>
 
-
-          <button class="rk-item ae-masonry__item button" id="recapButton"><img src="assets/img/recap.jpg" alt="">
-                <div class="item-meta">
-                  <h3>Project ReCap</h3>
-                  <p>zirconia recyling initiative</p>
-                  <p>materials|nature</p>
-                </div></button>
-            <div id="recapModal" class="modal">
-                <div class="modal-content">
-                  <img src="assets/img/recapTeeth.jpg">
-
-				<div class="rk-blog__items">
-		            <p style="text-align:left; margin: 20px">Over one million pounds of high-purity zirconia are thrown away annually as a result of the dental crown milling process, producing needless waste. In the subtractive milling process, 93% of each $200 zirconia blank gets consolidated as dust and chips into the dental lab waste stream. The accumulated debris is often combined with gypsum, wax, and metallic shavings from the lab's other processing streams. Though zirconia is desirable for use in ball milling media, precision valves, and high-wear components, impurities can not be tolerated. With sponsorship from 3M, my senior design team formulated a viable recycling stream for this material with minimal overhead cost for all industry parties involved.</p>
-
-                <p style="text-align:left; margin: 20px">Our solution was to isolate and characterize this zirconia waste in order to ship it off to raw materials processing companies for recycling. To demonstrate the viability of our method, we first filtered out powdered material from the waste stream using a cyclone separator. Our team then performed multiple characterization tests to create a datasheet for potential companies who might be interested in recycling the material. I personally developed a method of estimating the composition of the collected powder based on known densities of the input material and particle size while considering the effects of sphere packing. I also established a trial recycling program with Saint-Gobain, formulating a viable shipping strategy to get powder from dental labs to processing plants without undue cost. 
-                </p>
-	                  <p style="text-decoration:underline"><a href="assets/pdf/recapFinal.pdf" target="_blank">Project ReCap: Recycling of Dental Crown Byproducts
-						</a></p>
-	                  <p style="text-decoration:underline"><a href="http://coe.gatech.edu/news/capstone-design-spring-2016-winners" target="_blank"> 1st place Materials Science project at the 2016 Georgia Tech Capstone Expo</a></p>
-		        </div>                       
-                </div>
-            </div>
-
           <button class="rk-item ae-masonry__item button" id="banditButton"><img src="assets/img/bandit.jpeg" alt="">
                 <div class="item-meta">
                   <h3>Bandit</h3>
@@ -110,15 +87,35 @@
               <div class="modal-content">
                 <img src="assets/img/bandit.jpg">
                 <div class="rk-blog__items">
-		              <p style="text-align:left; margin: 20px"> Bandit is a wearable with all the functionality of existing fitness trackers and then some. It houses six completely modular sensor bays large enough for anything from geiger counters to run-of-the-mill accelerometers. With a variety of mounting options à la GoPro, Bandit is the complete sensor package for anyone: surfers, rally drivers, triathletes, moms, nuclear physicists, etc. The goal of this materials science design project was to work as a team to consider all of the steps required for getting a product to market. </p>
+                  <p style="text-align:left; margin: 20px"> Bandit is a wearable with all the functionality of existing fitness trackers and then some. It houses six completely modular sensor bays large enough for anything from geiger counters to run-of-the-mill accelerometers. With a variety of mounting options à la GoPro, Bandit is the complete sensor package for anyone: surfers, rally drivers, triathletes, moms, nuclear physicists, etc. The goal of this materials science design project was to work as a team to consider all of the steps required for getting a product to market. </p>
 
                   <p style="text-align:left; margin: 20px">As team lead, my role consisted of configuring the electronics and making a working three sensor prototype capable of sensor hot-swapping. I developed a minimum viable product using an Arduino with various off-the-shelf sensors. Hot-swapping was implemented through embedded sensor APIs, and Processing was used as a data visualizer. We explored a wide range of wearable technologies including room temperature thermoelectric generators, hypoallergenic elastomers, and advanced waterproofing techniques.
-	                </p>
-	                <p><a href="assets/pdf/banditFinal.pdf" target="_blank" style="text-decoration:underline">Bandit - A Modular Sensor Package for Triathletes</a></p><p>
-	                <a href="https://github.com/tshu/partModels/blob/master/11.30.SLDPRT" target="_blank" style="text-decoration:underline">Part Model</a></p>
-		        </div> 
+                  </p>
+                  <p><a href="assets/pdf/banditFinal.pdf" target="_blank" style="text-decoration:underline">Bandit - A Modular Sensor Package for Triathletes</a></p><p>
+                  <a href="https://github.com/tshu/partModels/blob/master/11.30.SLDPRT" target="_blank" style="text-decoration:underline">Part Model</a></p>
+            </div> 
               </div>
-            </div>           
+            </div>
+
+          <button class="rk-item ae-masonry__item button" id="ravenButton"><img src="assets/img/raven.PNG" alt="">
+                <div class="item-meta">
+                  <h3>Raven's Progressive Matrices</h3>
+                  <p>pattern recognition</p>
+                  <p>vision|intelligence</p>
+                </div>
+          </button>
+            <div id="ravenModal" class="modal">
+              <div class="modal-content">
+                <img src="assets/img/ravenb.PNG">
+                <div class="rk-blog__items">
+                  <p style="text-align:left; margin: 20px"> While machine learning techniques have their place, many patterns cannot be reduced to a feasible feature space. As a project for Dr. Ashok Goel's course on Knowledge-Based AI (of <a href="http://www.businessinsider.com/watson-ai-became-a-teaching-assistant-2016-5" target="_blank" style="text-decoration:underline"> Jill Watson</a> fame), I have created an intelligent agent which uses reasoning to solve Raven's problems. These visual puzzles require the test taker to extract implicit patterns from a series of figures, applying them to select the correct answer from a bank. While the problems are intuitive for humans, a state-of-the-art agent is only correct around 70% of the time.
+                  </p>
+                  <p style="text-align:left; margin: 20px"> On an implementation level using the Pillow library, my agent performs pixel level statistical analysis and gross transformations on the given figures. Tiers of reasoning progress from simple screens of bitmap identity to figure rotations to pixel density matching. Whatever relationships are found are then appropriately implemented either horizontally, vertically, or diagonally. The agent follows up with a generate-and-test approach at the end of each tier to produce a best guess for that tier. Finally, a unified accuracy metric for guess comparison allows the agent to select the best answer choice. Using this strategy, the agent achieves 55% accuracy without relying on any semantic knowledge or object detection.
+                  </p>
+                </div> 
+              </div>
+            </div>  
+
           <button class="rk-item ae-masonry__item button" id="amproButton"><img src="assets/img/ampro3.jpg" alt="">
                 <div class="item-meta">
                   <h3>AMPRO3</h3>
@@ -159,24 +156,49 @@
               </div>
             </div> 
 
-          <button class="rk-item ae-masonry__item button" id="ravenButton"><img src="assets/img/raven.PNG" alt="">
+          <button class="rk-item ae-masonry__item button" id="cameraButton" style="margin-top: 0px"> <img src="assets/img/me.gif" alt="">
                 <div class="item-meta">
-                  <h3>Raven's Progressive Matrices</h3>
-                  <p>pattern recognition</p>
-                  <p>vision|intelligence</p>
+                  <h3>Scout</h3>
+                  <p>haar cascades</p>
+                  <p>vision|art</p>
                 </div>
           </button>
-            <div id="ravenModal" class="modal">
+            <div id="cameraModal" class="modal">
               <div class="modal-content">
-                <img src="assets/img/ravenb.PNG">
+                <img src="assets/img/gnomes.jpg">
                 <div class="rk-blog__items">
-                  <p style="text-align:left; margin: 20px"> While machine learning techniques have their place, many patterns cannot be reduced to a feasible feature space. As a project for Dr. Ashok Goel's course on Knowledge-Based AI (of <a href="http://www.businessinsider.com/watson-ai-became-a-teaching-assistant-2016-5" target="_blank" style="text-decoration:underline"> Jill Watson</a> fame), I have created an intelligent agent which uses reasoning to solve Raven's problems. These visual puzzles require the test taker to extract implicit patterns from a series of figures, applying them to select the correct answer from a bank. While the problems are intuitive for humans, a state-of-the-art agent is only correct around 70% of the time.
+                  <p style="text-align:left; margin: 20px"> As a photographer, there are moments when I am nowhere near the camera, meaning I have to run back several yards just to pan it an inch. To address this issue I am developing Scout, a modular stepper motor/Raspberry Pi system to facilitate remote tracking. With any camera mounted to the stepper motor, the Raspberry Pi will be able to use a separate on-board camera to center the mounted camera toward signs held up by the photographer. Additionally, bluetooth communication with the Pi will allow manual tracking with a corresponding mobile app.
                   </p>
-                  <p style="text-align:left; margin: 20px"> On an implementation level using the Pillow library, my agent performs pixel level statistical analysis and gross transformations on the given figures. Tiers of reasoning progress from simple screens of bitmap identity to figure rotations to pixel density matching. Whatever relationships are found are then appropriately implemented either horizontally, vertically, or diagonally. The agent follows up with a generate-and-test approach at the end of each tier to produce a best guess for that tier. Finally, a unified accuracy metric for guess comparison allows the agent to select the best answer choice. Using this strategy, the agent achieves 55% accuracy without relying on any semantic knowledge or object detection.
+                  <p style="text-align:left; margin: 20px"> Automatic tracking should be possible by training a Haar cascade filter, which is a technique based on weak classifiers and AdaBoost for object discrimination. For each layer in the cascade, the filter searches for the existence of several features in the image which correspond to a specific object. Any portion of the image which meets the requirements for a single layer moves on to the next, discarding more of the image at each step. Eventually, the algorithm returns a selection of pixels which it believes to be the object it's looking for.
+                  </p>
+                  <p style="text-align:left; margin: 20px"> While cascade filters are extremely powerful, they are also very sensitive to noise. Detecting 10 out of 10 faces does not mean being able to tell them apart. I learned this the hard way after using OpenCV to train a cascade filter on hand symbols, which were interpreted as the same bowl of oatmeal for all I know. With the hardware assembled, my next step is to investigate using printed 2D symbols which can be selectively displayed. Combined with the commercially available mobile app for accessing camera functions, I expect Scout to excel at panoramas and group shots once it's complete.
                   </p>
                 </div> 
               </div>
+            </div> 
+
+        <button class="rk-item ae-masonry__item button" id="recapButton"><img src="assets/img/recap.jpg" alt="">
+                <div class="item-meta">
+                  <h3>Project ReCap</h3>
+                  <p>zirconia recyling initiative</p>
+                  <p>materials|nature</p>
+                </div></button>
+            <div id="recapModal" class="modal">
+                <div class="modal-content">
+                  <img src="assets/img/recapTeeth.jpg">
+
+        <div class="rk-blog__items">
+                <p style="text-align:left; margin: 20px">Over one million pounds of high-purity zirconia are thrown away annually as a result of the dental crown milling process, producing needless waste. In the subtractive milling process, 93% of each $200 zirconia blank gets consolidated as dust and chips into the dental lab waste stream. The accumulated debris is often combined with gypsum, wax, and metallic shavings from the lab's other processing streams. Though zirconia is desirable for use in ball milling media, precision valves, and high-wear components, impurities can not be tolerated. With sponsorship from 3M, my senior design team formulated a viable recycling stream for this material with minimal overhead cost for all industry parties involved.</p>
+
+                <p style="text-align:left; margin: 20px">Our solution was to isolate and characterize this zirconia waste in order to ship it off to raw materials processing companies for recycling. To demonstrate the viability of our method, we first filtered out powdered material from the waste stream using a cyclone separator. Our team then performed multiple characterization tests to create a datasheet for potential companies who might be interested in recycling the material. I personally developed a method of estimating the composition of the collected powder based on known densities of the input material and particle size while considering the effects of sphere packing. I also established a trial recycling program with Saint-Gobain, formulating a viable shipping strategy to get powder from dental labs to processing plants without undue cost. 
+                </p>
+                    <p style="text-decoration:underline"><a href="assets/pdf/recapFinal.pdf" target="_blank">Project ReCap: Recycling of Dental Crown Byproducts
+            </a></p>
+                    <p style="text-decoration:underline"><a href="http://coe.gatech.edu/news/capstone-design-spring-2016-winners" target="_blank"> 1st place Materials Science project at the 2016 Georgia Tech Capstone Expo</a></p>
+            </div>                       
+                </div>
             </div>
+          
 
           <button class="rk-item ae-masonry__item button" id="crystalButton" style="margin-top: 2px"><img src="assets/img/crystal1.jpg" alt="">
                 <div class="item-meta">
@@ -197,28 +219,7 @@
                   <p style="text-align:left; margin: 20px"> The findings suggest that the physical properties CNC composites are highly tuneable based on both manufacturing methods and CNC loading. Specifically, a wide range of CNC/PHB composites are possible which should perform well in dry environments while degrading in the presence of moisture and bacteria.</p>
                 </div> 
               </div>
-            </div>       
-
-          <button class="rk-item ae-masonry__item button" id="cameraButton" style="margin-top: 4px" title="Courtesy Greg Borenstein under Creative Commons 2.0"> <img src="assets/img/haarFace.jpg" alt="">
-                <div class="item-meta">
-                  <h3>Scout</h3>
-                  <p>haar cascades</p>
-                  <p>vision|art</p>
-                </div>
-          </button>
-            <div id="cameraModal" class="modal">
-              <div class="modal-content">
-                <img src="assets/img/gnomes.jpg">
-                <div class="rk-blog__items">
-                  <p style="text-align:left; margin: 20px"> As a photographer, there are moments when I am nowhere near the camera, meaning I have to run back several yards just to pan it an inch. To address this issue I am developing Scout, a modular stepper motor/Raspberry Pi system to facilitate remote tracking. With any camera mounted to the stepper motor, the Raspberry Pi will be able to use a separate on-board camera to center the mounted camera toward signs held up by the photographer. Additionally, bluetooth communication with the Pi will allow manual tracking with a corresponding mobile app.
-                  </p>
-                  <p style="text-align:left; margin: 20px"> Automatic tracking should be possible by training a Haar cascade filter, which is a technique based on weak classifiers and AdaBoost for object discrimination. For each layer in the cascade, the filter searches for the existence of several features in the image which correspond to a specific object. Any portion of the image which meets the requirements for a single layer moves on to the next, discarding more of the image at each step. Eventually, the algorithm returns a selection of pixels which it believes to be the object it's looking for.
-                  </p>
-                  <p style="text-align:left; margin: 20px"> While cascade filters are extremely powerful, they are also very sensitive to noise. Detecting 10 out of 10 faces does not mean being able to tell them apart. I learned this the hard way after using OpenCV to train a cascade filter on hand symbols, which were interpreted as the same bowl of oatmeal for all I know. With the hardware assembled, my next step is to investigate using printed 2D symbols which can be selectively displayed. Combined with the commercially available mobile app for accessing camera functions, I expect Scout to excel at panoramas and group shots once it's complete.
-                  </p>
-                </div> 
-              </div>
-            </div>   
+            </div>         
 
         </div>
       </div>
