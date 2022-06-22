@@ -1,7 +1,7 @@
 ---
 title: "About this space"
 layout: archive
-permalink: /about
+permalink: /about/
 categories: intro
 author_profile: true
 
