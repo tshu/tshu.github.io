@@ -1,6 +1,10 @@
 ---
 title: "Styling Syntax Test"
 last_modified_at: 2021-12-19T15:39:14
+layout: single
+categories: math
+tags: latex
+# classes: wide
 ---
 
 In this document, we'll showcase some commonly used features that Jekyll can achieve in a generated website. All of them can work out-of-the-box if you forked [our Minimal Mistakes Template][mm].

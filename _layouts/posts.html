@@ -4,6 +4,15 @@ layout: archive
 
 {{ content }}
 
+{% for post in site.pages %}
+  {% if post.title == "Sort by Category" or post.title == "Sort by Tag"%}
+      {% include archive-single.html %}
+  {% endif %}
+{% endfor %}
+
+<!-- spacing purposes -->
+<p style="margin-bottom:4em;"></p> 
+
 <ul class="taxonomy__index">
   {% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
   {% for year in postsInYear %}

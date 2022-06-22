@@ -1,6 +1,6 @@
 ---
-title: "Posts by Year"
-permalink: /year-archive/
+title: "Sort by Year"
+permalink: /leaves/year
 layout: posts
-author_profile: true
+author_profile: false
 ---

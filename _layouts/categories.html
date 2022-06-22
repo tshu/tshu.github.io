@@ -11,6 +11,15 @@ layout: archive
   {% endif %}
 {% endfor %}
 
+{% for post in site.pages %}
+  {% if post.title == "Sort by Tag" or post.title == "Sort by Year"%}
+      {% include archive-single.html %}
+  {% endif %}
+{% endfor %}
+
+<!-- spacing purposes -->
+<p style="margin-bottom:4em;"></p>
+
 <ul class="taxonomy__index">
   {% for i in (1..categories_max) reversed %}
     {% for category in site.categories %}

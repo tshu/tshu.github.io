@@ -9,12 +9,12 @@
 $doc-font-size: 16 !default;
 
 /* paragraph indention */
-$paragraph-indent: false !default; // true, false (default)
+$paragraph-indent: true !default; // true, false (default)
 $indent-var: 1.3em !default;
 
 /* system typefaces */
-$serif: Georgia, Times, serif !default;
-$sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+$serif: Georgia, Garamond, Times, serif !default;
+$sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 
@@ -29,8 +29,8 @@ $bodoni: "Bodoni MT", serif !default;
 $calisto: "Calisto MT", serif !default;
 $garamond: Garamond, serif !default;
 
-$global-font-family: $sans-serif !default;
-$header-font-family: $sans-serif !default;
+$global-font-family: $serif !default;
+$header-font-family: $serif !default;
 $caption-font-family: $serif !default;
 
 /* type scale */

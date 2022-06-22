@@ -10,8 +10,8 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme: "minimal-mistakes-jekyll"
-remote_theme: "mmistakes/minimal-mistakes"
+theme: "minimal-mistakes-jekyll"
+# remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
@@ -24,10 +24,10 @@ description              : "Tools and patterns for our short stay on Earth"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/images/pipe_threads.jpg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/temp_masthead.jpg" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+breadcrumbs              : true # true, false (default)
 words_per_minute         : 300
 
 repository: "tshu/staticman" # Git username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -90,7 +90,7 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Author bio"
   location         : "Somewhere"
-  email            :
+  email            : transverd@mit.edu
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
