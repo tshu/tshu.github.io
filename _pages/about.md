@@ -32,6 +32,4 @@ author:
       # url: "https://instagram.com/"
 ---
 
-It is often the case that complex relationships have simpler, closed-form representations. An astute sailor trims the jib with information gleaned from a puff over distant waters. The keen scientist skims a paper in under 10 minutes to cherry-pick a few ingredients for their academic stew.
-
-hi
+It is often the case that complex relationships have simpler, closed-form representations. An astute sailor recognizes a puff of wind in the distance and knows to trim their sails in advance. The keen scientist skims a paper in under 10 minutes to cherry-pick a few key ingredients to build their academic argument. 
