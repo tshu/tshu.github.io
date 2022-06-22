@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-22T16:49:46-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Transient Verdigris</title><subtitle>Tools and patterns for our short stay on Earth</subtitle><author><name>Your Name</name><email>transverd@mit.edu</email></author><entry><title type="html">LaTex Math Notations</title><link href="http://localhost:4000/latex-math-notations/" rel="alternate" type="text/html" title="LaTex Math Notations" /><published>2021-07-17T00:00:00-04:00</published><updated>2021-12-19T10:39:14-05:00</updated><id>http://localhost:4000/latex-math-notations</id><content type="html" xml:base="http://localhost:4000/latex-math-notations/">&lt;p&gt;This document provides the notation used in the &lt;a href=&quot;https://www.deeplearningbook.org/&quot;&gt;Deep Learning Book&lt;/a&gt;, and is highly based on this &lt;a href=&quot;https://github.com/goodfeli/dlbook_notation/blob/master/notation.tex&quot;&gt;LaTex file&lt;/a&gt;. You can refer to the source of this post for the latex commands.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;numbers-and-arrays&quot;&gt;Numbers and Arrays&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle a\)&lt;/td&gt;
+      &lt;td&gt;A scalar (integer or real)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \va\)&lt;/td&gt;
+      &lt;td&gt;A vector&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \mA\)&lt;/td&gt;
+      &lt;td&gt;A matrix&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \tA\)&lt;/td&gt;
+      &lt;td&gt;A tensor&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \mI_n\)&lt;/td&gt;
+      &lt;td&gt;Identity matrix with \(n\) rows and \(n\) columns&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \mI\)&lt;/td&gt;
+      &lt;td&gt;Identity matrix with dimensionality implied by context&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \ve^{(i)}\)&lt;/td&gt;
+      &lt;td&gt;Standard basis vector \([0,\dots,0,1,0,\dots,0]\) with a 1 at position \(i\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \text{diag}(\va)\)&lt;/td&gt;
+      &lt;td&gt;A square, diagonal matrix with diagonal entries given by \(\va\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \ra\)&lt;/td&gt;
+      &lt;td&gt;A scalar random variable&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \rva\)&lt;/td&gt;
+      &lt;td&gt;A vector-valued random variable&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \rmA\)&lt;/td&gt;
+      &lt;td&gt;A matrix-valued random variable&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;sets-and-graphs&quot;&gt;Sets and Graphs&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \sA\)&lt;/td&gt;
+      &lt;td&gt;A set&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \R\)&lt;/td&gt;
+      &lt;td&gt;The set of real numbers&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \{0, 1\}\)&lt;/td&gt;
+      &lt;td&gt;The set containing 0 and 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \{0, 1, \dots, n \}\)&lt;/td&gt;
+      &lt;td&gt;The set of all integers between \(0\) and \(n\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle [a, b]\)&lt;/td&gt;
+      &lt;td&gt;The real interval including \(a\) and \(b\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle (a, b]\)&lt;/td&gt;
+      &lt;td&gt;The real interval excluding \(a\) but including \(b\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \sA \backslash \sB\)&lt;/td&gt;
+      &lt;td&gt;Set subtraction, i.e., the set containing the elements of \(\sA\) that are not in \(\sB\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \gG\)&lt;/td&gt;
+      &lt;td&gt;A graph&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \parents_\gG(\ervx_i)\)&lt;/td&gt;
+      &lt;td&gt;The parents of \(\ervx_i\) in \(\gG\)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;indexing&quot;&gt;Indexing&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \eva_i\)&lt;/td&gt;
+      &lt;td&gt;Element \(i\) of vector \(\va\), with indexing starting at 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \eva_{-i}\)&lt;/td&gt;
+      &lt;td&gt;All elements of vector \(\va\) except for element \(i\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \emA_{i,j}\)&lt;/td&gt;
+      &lt;td&gt;Element \(i, j\) of matrix \(\mA\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \mA_{i, :}\)&lt;/td&gt;
+      &lt;td&gt;Row \(i\) of matrix \(\mA\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \mA_{:, i}\)&lt;/td&gt;
+      &lt;td&gt;Column \(i\) of matrix \(\mA\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \etA_{i, j, k}\)&lt;/td&gt;
+      &lt;td&gt;Element \((i, j, k)\) of a 3-D tensor \(\tA\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \tA_{:, :, i}\)&lt;/td&gt;
+      &lt;td&gt;2-D slice of a 3-D tensor&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \erva_i\)&lt;/td&gt;
+      &lt;td&gt;Element \(i\) of the random vector \(\rva\)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;linear-algebra-operations&quot;&gt;Linear Algebra Operations&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \mA^\top\)&lt;/td&gt;
+      &lt;td&gt;Transpose of matrix \(\mA\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \mA^+\)&lt;/td&gt;
+      &lt;td&gt;Moore-Penrose pseudoinverse of \(\mA\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \mA \odot \mB\)&lt;/td&gt;
+      &lt;td&gt;Element-wise (Hadamard) product of \(\mA\) and \(\mB\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \mathrm{det}(\mA)\)&lt;/td&gt;
+      &lt;td&gt;Determinant of \(\mA\)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;calculus&quot;&gt;Calculus&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle\frac{d y} {d x}\)&lt;/td&gt;
+      &lt;td&gt;Derivative of \(y\) with respect to \(x\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \frac{\partial y} {\partial x}\)&lt;/td&gt;
+      &lt;td&gt;Partial derivative of \(y\) with respect to \(x\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \nabla_\vx y\)&lt;/td&gt;
+      &lt;td&gt;Gradient of \(y\) with respect to \(\vx\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \nabla_\mX y\)&lt;/td&gt;
+      &lt;td&gt;Matrix derivatives of \(y\) with respect to \(\mX\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \nabla_\tX y\)&lt;/td&gt;
+      &lt;td&gt;Tensor containing derivatives of \(y\) with respect to \(\tX\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \frac{\partial f}{\partial \vx}\)&lt;/td&gt;
+      &lt;td&gt;Jacobian matrix \(\mJ \in \R^{m\times n}\) of \(f: \R^n \rightarrow \R^m\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \nabla_\vx^2 f(\vx)\text{ or }\mH( f)(\vx)\)&lt;/td&gt;
+      &lt;td&gt;The Hessian matrix of \(f\) at input point \(\vx\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \int f(\vx) d\vx\)&lt;/td&gt;
+      &lt;td&gt;Definite integral over the entire domain of \(\vx\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \int_\sS f(\vx) d\vx\)&lt;/td&gt;
+      &lt;td&gt;Definite integral with respect to \(\vx\) over the set \(\sS\)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;probability-and-information-theory&quot;&gt;Probability and Information Theory&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \ra \bot \rb\)&lt;/td&gt;
+      &lt;td&gt;The random variables \(\ra\) and \(\rb\) are independent&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \ra \bot \rb \mid \rc\)&lt;/td&gt;
+      &lt;td&gt;They are conditionally independent given \(\rc\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle P(\ra)\)&lt;/td&gt;
+      &lt;td&gt;A probability distribution over a discrete variable&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle p(\ra)\)&lt;/td&gt;
+      &lt;td&gt;A probability distribution over a continuous variable, or over a variable whose type has not been specified&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \ra \sim P\)&lt;/td&gt;
+      &lt;td&gt;Random variable \(\ra\) has distribution \(P\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle  \E_{\rx\sim P} [ f(x) ]\text{ or } \E f(x)\)&lt;/td&gt;
+      &lt;td&gt;Expectation of \(f(x)\) with respect to \(P(\rx)\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \Var(f(x))\)&lt;/td&gt;
+      &lt;td&gt;Variance of \(f(x)\) under \(P(\rx)\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \Cov(f(x),g(x))\)&lt;/td&gt;
+      &lt;td&gt;Covariance of \(f(x)\) and \(g(x)\) under \(P(\rx)\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle H(\rx)\)&lt;/td&gt;
+      &lt;td&gt;Shannon entropy of the random variable \(\rx\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \KL ( P \Vert Q )\)&lt;/td&gt;
+      &lt;td&gt;Kullback-Leibler divergence of P and Q&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \mathcal{N} ( \vx ; \vmu , \mSigma)\)&lt;/td&gt;
+      &lt;td&gt;Gaussian distribution over \(\vx\) with mean \(\vmu\) and covariance \(\mSigma\)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;functions&quot;&gt;Functions&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle f: \sA \rightarrow \sB\)&lt;/td&gt;
+      &lt;td&gt;The function \(f\) with domain \(\sA\) and range \(\sB\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle f \circ g\)&lt;/td&gt;
+      &lt;td&gt;Composition of the functions \(f\) and \(g\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle f(\vx ; \vtheta)\)&lt;/td&gt;
+      &lt;td&gt;A function of \(\vx\) parametrized by \(\vtheta\). (Sometimes we write \(f(\vx)\) and omit the argument \(\vtheta\) to lighten notation)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \log x\)&lt;/td&gt;
+      &lt;td&gt;Natural logarithm of \(x\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \sigma(x)\)&lt;/td&gt;
+      &lt;td&gt;Logistic sigmoid, \(\displaystyle \frac{1} {1 + \exp(-x)}\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \zeta(x)\)&lt;/td&gt;
+      &lt;td&gt;Softplus, \(\log(1 + \exp(x))\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \vert\vert \vx \vert\vert_p\)&lt;/td&gt;
+      &lt;td&gt;\(\normlp\) norm of \(\vx\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \vert\vert \vx \vert\vert\)&lt;/td&gt;
+      &lt;td&gt;\(\normltwo\) norm of \(\vx\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle x^+\)&lt;/td&gt;
+      &lt;td&gt;Positive part of \(x\), i.e., \(\max(0,x)\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \1_\mathrm{condition}\)&lt;/td&gt;
+      &lt;td&gt;is 1 if the condition is true, 0 otherwise&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Sometimes we use a function \(f\) whose argument is a scalar but apply
+it to a vector, matrix, or tensor: \(f(\vx)\), \(f(\mX)\), or \(f(\tX)\).
+This denotes the application of \(f\) to the
+array element-wise. For example, if \(\tC = \sigma(\tX)\), then \(\etC_{i,j,k} = \sigma(\etX_{i,j,k})\)
+for all valid values of \(i\), \(j\) and \(k\).&lt;/p&gt;
+
+&lt;h2 id=&quot;datasets-and-distributions&quot;&gt;Datasets and Distributions&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \pdata\)&lt;/td&gt;
+      &lt;td&gt;The data generating distribution&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \ptrain\)&lt;/td&gt;
+      &lt;td&gt;The empirical distribution defined by the training set&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \sX\)&lt;/td&gt;
+      &lt;td&gt;A set of training examples&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \vx^{(i)}\)&lt;/td&gt;
+      &lt;td&gt;The \(i\)-th example (input) from a dataset&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle y^{(i)}\text{ or }\vy^{(i)}\)&lt;/td&gt;
+      &lt;td&gt;The target associated with \(\vx^{(i)}\) for supervised learning&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(\displaystyle \mX\)&lt;/td&gt;
+      &lt;td&gt;The \(m \times n\) matrix with input example \(\vx^{(i)}\) in row \(\mX_{i,:}\)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;final-notes&quot;&gt;Final Notes&lt;/h2&gt;
+
+&lt;p&gt;For using these commands, your post should have the following yaml config in the beginning of your markdown file:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;dlbook_notation&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Due to the compatibility issue between Kramdown and Mathjax, You should not use the condition symbol (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;|&lt;/code&gt;) directly (kramdown table synyax), use the escaped text (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\vert&lt;/code&gt;) instead. Furthermore, you will want to use double dollar sign (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$$...$$&lt;/code&gt;) for most of your math notations, since single dollar sign (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$...$&lt;/code&gt;) may have some conflict with kramdown. (e.g., underscore need to be escaped with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\_&lt;/code&gt;)&lt;/p&gt;</content><author><name>Your Name</name><email>transverd@mit.edu</email></author><summary type="html">This document provides the notation used in the Deep Learning Book, and is highly based on this LaTex file. You can refer to the source of this post for the latex commands.</summary></entry><entry><title type="html">Styling Syntax Test</title><link href="http://localhost:4000/math/styling-syntax-test/" rel="alternate" type="text/html" title="Styling Syntax Test" /><published>2020-10-25T00:00:00-04:00</published><updated>2021-12-19T10:39:14-05:00</updated><id>http://localhost:4000/math/styling-syntax-test</id><content type="html" xml:base="http://localhost:4000/math/styling-syntax-test/">&lt;p&gt;In this document, we’ll showcase some commonly used features that Jekyll can achieve in a generated website. All of them can work out-of-the-box if you forked &lt;a href=&quot;https://github.com/j3soon/minimal-mistakes-template&quot;&gt;our Minimal Mistakes Template&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The feature includes: markdown, mathjax, latex, yaml, css, html, liquid.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;markdown-basics&quot;&gt;Markdown Basics&lt;/h2&gt;
+
+&lt;p&gt;See &lt;a href=&quot;https://guides.github.com/features/mastering-markdown/&quot;&gt;Mastering Markdown&lt;/a&gt; on GitHub Guides for the basic usages.&lt;/p&gt;
+
+&lt;p&gt;The following demonstrations are all previews followed by its markdown syntax:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Normal text&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Normal text
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Newline
+Failed&lt;/p&gt;
+
+&lt;p&gt;Newline&lt;/p&gt;
+
+&lt;p&gt;Success&lt;/p&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Newline
+Failed
+
+Newline
+
+Success
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Snippet from other sites&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; Snippet from other sites
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;inline-code&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;`inline-code`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Bold&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**Bold**
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;code
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```
+code
+```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// c code&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```c
+int a = 0; // c code
+```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// js code&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```js
+int a = 0; // js code
+```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;one
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;a&lt;/p&gt;
+
+        &lt;p&gt;Contents should be indented correctly&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;b&lt;/p&gt;
+
+        &lt;p&gt;Extra line to ensure line-break&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;two
+    &lt;ul&gt;
+      &lt;li&gt;c
+Line-break failed&lt;/li&gt;
+      &lt;li&gt;d&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;No Indent&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;1.&lt;/span&gt; one
+&lt;span class=&quot;p&quot;&gt;   -&lt;/span&gt; a&lt;span class=&quot;sb&quot;&gt;
+
+     Contents should be indented correctly
+
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;   -&lt;/span&gt; b&lt;span class=&quot;sb&quot;&gt;
+
+     Extra line to ensure line-break
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;2.&lt;/span&gt; two
+&lt;span class=&quot;p&quot;&gt;   -&lt;/span&gt; c
+     Line-break failed
+&lt;span class=&quot;p&quot;&gt;   -&lt;/span&gt; d
+
+   No Indent
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Table&lt;/th&gt;
+      &lt;th&gt;Left&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Center&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Right&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;A&lt;/td&gt;
+      &lt;td&gt;B&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;C&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;D&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;|Table|Left|Center|Right|
+|-----|----|:----:|----:|
+|A|B|C|D|
+|1|2|3|4|
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/math/styling-syntax-test/img.png&quot; alt=&quot;alt-text-of-sample-image&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;![&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alt-text-of-sample-image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;{{site.imgs}}{{page.id}}/img.png&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://google.com&quot;&gt;In-line link (look bad in plain text)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://google.com&quot;&gt;This is better&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[In-line link (look bad in plain text)](https://google.com)
+
+[This is better][google]
+
+[google]: https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;header-example&quot;&gt;Header example&lt;/h3&gt;
+
+&lt;h4 id=&quot;header-example2&quot;&gt;Header example2&lt;/h4&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gu&quot;&gt;### Header example&lt;/span&gt;
+
+&lt;span class=&quot;gu&quot;&gt;#### Header example2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;mathjax--latex&quot;&gt;MathJax &amp;amp; LaTex&lt;/h2&gt;
+
+&lt;p&gt;Inline math \(f(x)=x^2\)&lt;/p&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Inline math $$f(x)=x^2$$
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Long math&lt;/p&gt;
+
+&lt;p&gt;\(\max\limits_\theta L_{\theta_0}(\theta)\), subject to \(D_{KL}^{\rho_{\theta_0}}(\theta_0,\theta)\le\delta\), where \(D_{KL}^\rho(\theta_1,\theta_2)=\mathbb{E}_{s\sim\rho}[D_{KL}(\pi_{\theta_1}(\cdot\vert s)\mid\mid\pi_{\theta_2}(\cdot\vert s))]\)&lt;/p&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;$$&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\max\limits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\theta&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; L&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\theta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\theta&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$$&lt;/span&gt;, subject to &lt;span class=&quot;p&quot;&gt;$$&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;KL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}^{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\rho&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\theta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\theta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\theta&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\le\delta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$$&lt;/span&gt;, where &lt;span class=&quot;p&quot;&gt;$$&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;KL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}^&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\rho&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\theta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\theta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\mathbb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\sim\rho&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;KL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\pi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\theta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\cdot\vert&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\mid\mid\pi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\theta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\cdot\vert&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$$&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Centered math:&lt;/p&gt;
+
+\[f(x)=x^2\]
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$$f(x)=x^2$$
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Symbols&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Using&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Latex&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;\(✔\)&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;\(\color{green} ✔\)&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;\(\color{red} ✘\)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;|Symbols|Using|Latex|
+|:-:|:-:|:-:|
+|&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;✔&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;|&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;green&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; ✔&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;|&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; ✘&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;|
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+\[\begin{aligned}
+G_t&amp;amp;=R_{t+1}+\gamma R_{t+2}+\gamma^2 R_{t+3}+\gamma^3 R_{t+4}+...\\
+&amp;amp;=R_{t+1}+\gamma(R_{t+2}+\gamma R_{t+3}+\gamma^2 R_{t+4})+...\\
+&amp;amp;=R_{t+1}+\gamma G_{t+1}\\
+\end{aligned}\]
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;$$&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;aligned&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;
+G&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\gamma&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\gamma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\gamma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\gamma&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\gamma&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\gamma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\gamma&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; G&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;aligned&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}$$&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Broken equation $61&lt;em&gt;{10}$, $111101_2$, $3D&lt;/em&gt;{16}$&lt;/p&gt;
+
+&lt;p&gt;Fixed equation $61_{10}$, $111101_2$, $3D_{16}$&lt;/p&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Broken equation $61_{10}$, $111101_2$, $3D_{16}$
+
+Fixed equation $61&lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;{10}$, $111101&lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;2$, $3D&lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;{16}$
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Note: The fixed equation only works when the &lt;a href=&quot;https://docs.mathjax.org/en/latest/input/tex/delimiters.html&quot;&gt;single dollar sign is enabled&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;yaml&quot;&gt;YAML&lt;/h2&gt;
+
+&lt;p&gt;Should be at the front of every markdown file.&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Styling&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Syntax&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Test&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll mathjax latex&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;last_modified_at&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;2021-12-19T06:53:11&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Text before this will be shown in search results.&lt;/p&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;minimal-mistake-styles&quot;&gt;Minimal Mistake Styles&lt;/h2&gt;
+
+&lt;div class=&quot;notice--danger&quot;&gt;
+
+  &lt;p&gt;🧻 &lt;strong&gt;Preliminary Draft&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;The author hasn’t finished editing this post, and the content hasn’t been proof-read. While this post may contain useful information, the overall quality may be pretty low.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;notice--danger&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;markdown=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+🧻 &lt;span class=&quot;gs&quot;&gt;**Preliminary Draft**&lt;/span&gt;
+
+The author hasn't finished editing this post, and the content hasn't been proof-read. While this post may contain useful information, the overall quality may be pretty low.
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;notice--primary&quot;&gt;
+
+  &lt;p&gt;📄 &lt;strong&gt;Source&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;📜 Paper&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;notice--primary&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;markdown=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+📄 &lt;span class=&quot;gs&quot;&gt;**Source**&lt;/span&gt;
+
+📜 Paper
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;notice&quot;&gt;
+
+  &lt;p&gt;✏️ &lt;strong&gt;Author’s Note&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;Content&lt;/p&gt;
+
+  &lt;p&gt;&lt;strong&gt;Bold&lt;/strong&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;notice&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;markdown=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+✏️ &lt;span class=&quot;gs&quot;&gt;**Author's Note**&lt;/span&gt;
+
+Content
+
+&lt;span class=&quot;gs&quot;&gt;**Bold**&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;notice--warning&quot;&gt;
+
+  &lt;p&gt;♾️ &lt;strong&gt;Math Definition&lt;/strong&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;notice--warning&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;markdown=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+♾️ &lt;span class=&quot;gs&quot;&gt;**Math Definition**&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;notice--danger&quot;&gt;
+
+  &lt;p&gt;⚠️ &lt;strong&gt;Common Mistakes&lt;/strong&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;notice--danger&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;markdown=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+⚠️ &lt;span class=&quot;gs&quot;&gt;**Common Mistakes**&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;notice--success&quot;&gt;
+
+  &lt;p&gt;✔️ &lt;strong&gt;Keynote&lt;/strong&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;notice--success&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;markdown=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+✔️ &lt;span class=&quot;gs&quot;&gt;**Keynote**&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;notice--info&quot;&gt;
+
+  &lt;p&gt;🏷️ &lt;strong&gt;Label&lt;/strong&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;notice--info&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;markdown=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+🏷️ &lt;span class=&quot;gs&quot;&gt;**Label**&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;notice--info&quot;&gt;
+
+  &lt;p&gt;📔 &lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;📝 Post&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;notice--info&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;markdown=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+📔 &lt;span class=&quot;gs&quot;&gt;**Prerequisites**&lt;/span&gt;
+
+📝 Post
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;html&quot;&gt;HTML&lt;/h2&gt;
+
+&lt;details&gt;&lt;summary&gt;Click to Expand&lt;/summary&gt;&lt;div&gt;
+    &lt;p&gt;&lt;strong&gt;Yeah!&lt;/strong&gt; Markdown&lt;/p&gt;
+  &lt;/div&gt;&lt;/details&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;details&amp;gt;&amp;lt;summary&amp;gt;&lt;/span&gt;Click to Expand&lt;span class=&quot;nt&quot;&gt;&amp;lt;/summary&amp;gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;markdown=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;gs&quot;&gt;**Yeah!**&lt;/span&gt; Markdown
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&amp;lt;/details&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;liquid&quot;&gt;Liquid&lt;/h2&gt;
+
+&lt;p&gt;/math/styling-syntax-test&lt;/p&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;final-notes&quot;&gt;Final Notes&lt;/h2&gt;
+
+&lt;p&gt;Due to the compatibility issue between Kramdown and Mathjax, You should not use the condition symbol (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;|&lt;/code&gt;) directly (kramdown table synyax), use the escaped text (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\vert&lt;/code&gt;) instead. Furthermore, you will want to use double dollar sign (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$$...$$&lt;/code&gt;) for most of your math notations, since single dollar sign (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$...$&lt;/code&gt;) may have some conflict with kramdown. (e.g., underscore need to be escaped with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\_&lt;/code&gt;)&lt;/p&gt;</content><author><name>Your Name</name><email>transverd@mit.edu</email></author><category term="math" /><category term="latex" /><summary type="html">In this document, we’ll showcase some commonly used features that Jekyll can achieve in a generated website. All of them can work out-of-the-box if you forked our Minimal Mistakes Template. The feature includes: markdown, mathjax, latex, yaml, css, html, liquid.</summary></entry></feed>

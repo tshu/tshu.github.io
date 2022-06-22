@@ -1,0 +1,1333 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>LaTex Math Notations | Transient Verdigris</title>
+<meta name="description" content="This document provides the notation used in the Deep Learning Book, and is highly based on this LaTex file. You can refer to the source of this post for the latex commands.">
+
+
+  <meta name="author" content="Your Name">
+  
+  <meta property="article:author" content="Your Name">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Transient Verdigris">
+<meta property="og:title" content="LaTex Math Notations">
+<meta property="og:url" content="http://localhost:4000/latex-math-notations/">
+
+
+  <meta property="og:description" content="This document provides the notation used in the Deep Learning Book, and is highly based on this LaTex file. You can refer to the source of this post for the latex commands.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-07-17T00:00:00-04:00">
+
+
+
+  <meta property="article:modified_time" content="2021-12-19T10:39:14-05:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/latex-math-notations/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Transient Verdigris",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Transient Verdigris Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+  <!--
+https://github.com/goodfeli/dlbook_notation/blob/master/math_commands.tex
+https://github.com/goodfeli/dlbook_notation/blob/master/notation.tex
+-->
+
+<div style="visibility: collapse">
+$$
+\def\bm#1{\boldsymbol{#1}}
+
+%%%%% NEW MATH DEFINITIONS %%%%%
+
+<!--
+% Mark sections of captions for referring to divisions of figures
+\newcommand{\figleft}{{\em (Left)}}
+\newcommand{\figcenter}{{\em (Center)}}
+\newcommand{\figright}{{\em (Right)}}
+\newcommand{\figtop}{{\em (Top)}}
+\newcommand{\figbottom}{{\em (Bottom)}}
+\newcommand{\captiona}{{\em (a)}}
+\newcommand{\captionb}{{\em (b)}}
+\newcommand{\captionc}{{\em (c)}}
+\newcommand{\captiond}{{\em (d)}}
+-->
+
+% Highlight a newly defined term
+\newcommand{\newterm}[1]{{\bf #1}}
+
+<!--
+% Figure reference, lower-case.
+\def\figref#1{figure~\ref{#1}}
+% Figure reference, capital. For start of sentence
+\def\Figref#1{Figure~\ref{#1}}
+\def\twofigref#1#2{figures \ref{#1} and \ref{#2}}
+\def\quadfigref#1#2#3#4{figures \ref{#1}, \ref{#2}, \ref{#3} and \ref{#4}}
+% Section reference, lower-case.
+\def\secref#1{section~\ref{#1}}
+% Section reference, capital.
+\def\Secref#1{Section~\ref{#1}}
+% Reference to two sections.
+\def\twosecrefs#1#2{sections \ref{#1} and \ref{#2}}
+% Reference to three sections.
+\def\secrefs#1#2#3{sections \ref{#1}, \ref{#2} and \ref{#3}}
+% Reference to an equation, lower-case.
+\def\eqref#1{equation~\ref{#1}}
+% Reference to an equation, upper case
+\def\Eqref#1{Equation~\ref{#1}}
+% A raw reference to an equation---avoid using if possible
+\def\plaineqref#1{\ref{#1}}
+% Reference to a chapter, lower-case.
+\def\chapref#1{chapter~\ref{#1}}
+% Reference to an equation, upper case.
+\def\Chapref#1{Chapter~\ref{#1}}
+% Reference to a range of chapters
+\def\rangechapref#1#2{chapters\ref{#1}--\ref{#2}}
+% Reference to an algorithm, lower-case.
+\def\algref#1{algorithm~\ref{#1}}
+% Reference to an algorithm, upper case.
+\def\Algref#1{Algorithm~\ref{#1}}
+\def\twoalgref#1#2{algorithms \ref{#1} and \ref{#2}}
+\def\Twoalgref#1#2{Algorithms \ref{#1} and \ref{#2}}
+% Reference to a part, lower case
+\def\partref#1{part~\ref{#1}}
+% Reference to a part, upper case
+\def\Partref#1{Part~\ref{#1}}
+\def\twopartref#1#2{parts \ref{#1} and \ref{#2}}
+-->
+
+\def\ceil#1{\lceil #1 \rceil}
+\def\floor#1{\lfloor #1 \rfloor}
+\def\1{\bm{1}}
+\newcommand{\train}{\mathcal{D}}
+\newcommand{\valid}{\mathcal{D_{\mathrm{valid}}}}
+\newcommand{\test}{\mathcal{D_{\mathrm{test}}}}
+
+\def\eps{{\epsilon}}
+
+
+% Random variables
+\def\reta{{\textnormal{$\eta$}}}
+\def\ra{{\textnormal{a}}}
+\def\rb{{\textnormal{b}}}
+\def\rc{{\textnormal{c}}}
+\def\rd{{\textnormal{d}}}
+\def\re{{\textnormal{e}}}
+\def\rf{{\textnormal{f}}}
+\def\rg{{\textnormal{g}}}
+\def\rh{{\textnormal{h}}}
+\def\ri{{\textnormal{i}}}
+\def\rj{{\textnormal{j}}}
+\def\rk{{\textnormal{k}}}
+\def\rl{{\textnormal{l}}}
+% rm is already a command, just don't name any random variables m
+\def\rn{{\textnormal{n}}}
+\def\ro{{\textnormal{o}}}
+\def\rp{{\textnormal{p}}}
+\def\rq{{\textnormal{q}}}
+\def\rr{{\textnormal{r}}}
+\def\rs{{\textnormal{s}}}
+\def\rt{{\textnormal{t}}}
+\def\ru{{\textnormal{u}}}
+\def\rv{{\textnormal{v}}}
+\def\rw{{\textnormal{w}}}
+\def\rx{{\textnormal{x}}}
+\def\ry{{\textnormal{y}}}
+\def\rz{{\textnormal{z}}}
+
+% Random vectors
+\def\rvepsilon{{\mathbf{\epsilon}}}
+\def\rvtheta{{\mathbf{\theta}}}
+\def\rva{{\mathbf{a}}}
+\def\rvb{{\mathbf{b}}}
+\def\rvc{{\mathbf{c}}}
+\def\rvd{{\mathbf{d}}}
+\def\rve{{\mathbf{e}}}
+\def\rvf{{\mathbf{f}}}
+\def\rvg{{\mathbf{g}}}
+\def\rvh{{\mathbf{h}}}
+\def\rvu{{\mathbf{i}}}
+\def\rvj{{\mathbf{j}}}
+\def\rvk{{\mathbf{k}}}
+\def\rvl{{\mathbf{l}}}
+\def\rvm{{\mathbf{m}}}
+\def\rvn{{\mathbf{n}}}
+\def\rvo{{\mathbf{o}}}
+\def\rvp{{\mathbf{p}}}
+\def\rvq{{\mathbf{q}}}
+\def\rvr{{\mathbf{r}}}
+\def\rvs{{\mathbf{s}}}
+\def\rvt{{\mathbf{t}}}
+\def\rvu{{\mathbf{u}}}
+\def\rvv{{\mathbf{v}}}
+\def\rvw{{\mathbf{w}}}
+\def\rvx{{\mathbf{x}}}
+\def\rvy{{\mathbf{y}}}
+\def\rvz{{\mathbf{z}}}
+
+% Elements of random vectors
+\def\erva{{\textnormal{a}}}
+\def\ervb{{\textnormal{b}}}
+\def\ervc{{\textnormal{c}}}
+\def\ervd{{\textnormal{d}}}
+\def\erve{{\textnormal{e}}}
+\def\ervf{{\textnormal{f}}}
+\def\ervg{{\textnormal{g}}}
+\def\ervh{{\textnormal{h}}}
+\def\ervi{{\textnormal{i}}}
+\def\ervj{{\textnormal{j}}}
+\def\ervk{{\textnormal{k}}}
+\def\ervl{{\textnormal{l}}}
+\def\ervm{{\textnormal{m}}}
+\def\ervn{{\textnormal{n}}}
+\def\ervo{{\textnormal{o}}}
+\def\ervp{{\textnormal{p}}}
+\def\ervq{{\textnormal{q}}}
+\def\ervr{{\textnormal{r}}}
+\def\ervs{{\textnormal{s}}}
+\def\ervt{{\textnormal{t}}}
+\def\ervu{{\textnormal{u}}}
+\def\ervv{{\textnormal{v}}}
+\def\ervw{{\textnormal{w}}}
+\def\ervx{{\textnormal{x}}}
+\def\ervy{{\textnormal{y}}}
+\def\ervz{{\textnormal{z}}}
+
+% Random matrices
+\def\rmA{{\mathbf{A}}}
+\def\rmB{{\mathbf{B}}}
+\def\rmC{{\mathbf{C}}}
+\def\rmD{{\mathbf{D}}}
+\def\rmE{{\mathbf{E}}}
+\def\rmF{{\mathbf{F}}}
+\def\rmG{{\mathbf{G}}}
+\def\rmH{{\mathbf{H}}}
+\def\rmI{{\mathbf{I}}}
+\def\rmJ{{\mathbf{J}}}
+\def\rmK{{\mathbf{K}}}
+\def\rmL{{\mathbf{L}}}
+\def\rmM{{\mathbf{M}}}
+\def\rmN{{\mathbf{N}}}
+\def\rmO{{\mathbf{O}}}
+\def\rmP{{\mathbf{P}}}
+\def\rmQ{{\mathbf{Q}}}
+\def\rmR{{\mathbf{R}}}
+\def\rmS{{\mathbf{S}}}
+\def\rmT{{\mathbf{T}}}
+\def\rmU{{\mathbf{U}}}
+\def\rmV{{\mathbf{V}}}
+\def\rmW{{\mathbf{W}}}
+\def\rmX{{\mathbf{X}}}
+\def\rmY{{\mathbf{Y}}}
+\def\rmZ{{\mathbf{Z}}}
+
+% Elements of random matrices
+\def\ermA{{\textnormal{A}}}
+\def\ermB{{\textnormal{B}}}
+\def\ermC{{\textnormal{C}}}
+\def\ermD{{\textnormal{D}}}
+\def\ermE{{\textnormal{E}}}
+\def\ermF{{\textnormal{F}}}
+\def\ermG{{\textnormal{G}}}
+\def\ermH{{\textnormal{H}}}
+\def\ermI{{\textnormal{I}}}
+\def\ermJ{{\textnormal{J}}}
+\def\ermK{{\textnormal{K}}}
+\def\ermL{{\textnormal{L}}}
+\def\ermM{{\textnormal{M}}}
+\def\ermN{{\textnormal{N}}}
+\def\ermO{{\textnormal{O}}}
+\def\ermP{{\textnormal{P}}}
+\def\ermQ{{\textnormal{Q}}}
+\def\ermR{{\textnormal{R}}}
+\def\ermS{{\textnormal{S}}}
+\def\ermT{{\textnormal{T}}}
+\def\ermU{{\textnormal{U}}}
+\def\ermV{{\textnormal{V}}}
+\def\ermW{{\textnormal{W}}}
+\def\ermX{{\textnormal{X}}}
+\def\ermY{{\textnormal{Y}}}
+\def\ermZ{{\textnormal{Z}}}
+
+% Vectors
+\def\vzero{{\bm{0}}}
+\def\vone{{\bm{1}}}
+\def\vmu{{\bm{\mu}}}
+\def\vtheta{{\bm{\theta}}}
+\def\va{{\bm{a}}}
+\def\vb{{\bm{b}}}
+\def\vc{{\bm{c}}}
+\def\vd{{\bm{d}}}
+\def\ve{{\bm{e}}}
+\def\vf{{\bm{f}}}
+\def\vg{{\bm{g}}}
+\def\vh{{\bm{h}}}
+\def\vi{{\bm{i}}}
+\def\vj{{\bm{j}}}
+\def\vk{{\bm{k}}}
+\def\vl{{\bm{l}}}
+\def\vm{{\bm{m}}}
+\def\vn{{\bm{n}}}
+\def\vo{{\bm{o}}}
+\def\vp{{\bm{p}}}
+\def\vq{{\bm{q}}}
+\def\vr{{\bm{r}}}
+\def\vs{{\bm{s}}}
+\def\vt{{\bm{t}}}
+\def\vu{{\bm{u}}}
+\def\vv{{\bm{v}}}
+\def\vw{{\bm{w}}}
+\def\vx{{\bm{x}}}
+\def\vy{{\bm{y}}}
+\def\vz{{\bm{z}}}
+
+% Elements of vectors
+\def\evalpha{{\alpha}}
+\def\evbeta{{\beta}}
+\def\evepsilon{{\epsilon}}
+\def\evlambda{{\lambda}}
+\def\evomega{{\omega}}
+\def\evmu{{\mu}}
+\def\evpsi{{\psi}}
+\def\evsigma{{\sigma}}
+\def\evtheta{{\theta}}
+\def\eva{{a}}
+\def\evb{{b}}
+\def\evc{{c}}
+\def\evd{{d}}
+\def\eve{{e}}
+\def\evf{{f}}
+\def\evg{{g}}
+\def\evh{{h}}
+\def\evi{{i}}
+\def\evj{{j}}
+\def\evk{{k}}
+\def\evl{{l}}
+\def\evm{{m}}
+\def\evn{{n}}
+\def\evo{{o}}
+\def\evp{{p}}
+\def\evq{{q}}
+\def\evr{{r}}
+\def\evs{{s}}
+\def\evt{{t}}
+\def\evu{{u}}
+\def\evv{{v}}
+\def\evw{{w}}
+\def\evx{{x}}
+\def\evy{{y}}
+\def\evz{{z}}
+
+% Matrix
+\def\mA{{\bm{A}}}
+\def\mB{{\bm{B}}}
+\def\mC{{\bm{C}}}
+\def\mD{{\bm{D}}}
+\def\mE{{\bm{E}}}
+\def\mF{{\bm{F}}}
+\def\mG{{\bm{G}}}
+\def\mH{{\bm{H}}}
+\def\mI{{\bm{I}}}
+\def\mJ{{\bm{J}}}
+\def\mK{{\bm{K}}}
+\def\mL{{\bm{L}}}
+\def\mM{{\bm{M}}}
+\def\mN{{\bm{N}}}
+\def\mO{{\bm{O}}}
+\def\mP{{\bm{P}}}
+\def\mQ{{\bm{Q}}}
+\def\mR{{\bm{R}}}
+\def\mS{{\bm{S}}}
+\def\mT{{\bm{T}}}
+\def\mU{{\bm{U}}}
+\def\mV{{\bm{V}}}
+\def\mW{{\bm{W}}}
+\def\mX{{\bm{X}}}
+\def\mY{{\bm{Y}}}
+\def\mZ{{\bm{Z}}}
+\def\mBeta{{\bm{\beta}}}
+\def\mPhi{{\bm{\Phi}}}
+\def\mLambda{{\bm{\Lambda}}}
+\def\mSigma{{\bm{\Sigma}}}
+
+% Tensor
+<!--
+\DeclareMathAlphabet{\mathsfit}{\encodingdefault}{\sfdefault}{m}{sl}
+\SetMathAlphabet{\mathsfit}{bold}{\encodingdefault}{\sfdefault}{bx}{n}
+\newcommand{\tens}[1]{\bm{\mathsfit{#1}}}
+-->
+\newcommand{\tens}[1]{\mathsf{#1}}
+\def\tA{{\tens{A}}}
+\def\tB{{\tens{B}}}
+\def\tC{{\tens{C}}}
+\def\tD{{\tens{D}}}
+\def\tE{{\tens{E}}}
+\def\tF{{\tens{F}}}
+\def\tG{{\tens{G}}}
+\def\tH{{\tens{H}}}
+\def\tI{{\tens{I}}}
+\def\tJ{{\tens{J}}}
+\def\tK{{\tens{K}}}
+\def\tL{{\tens{L}}}
+\def\tM{{\tens{M}}}
+\def\tN{{\tens{N}}}
+\def\tO{{\tens{O}}}
+\def\tP{{\tens{P}}}
+\def\tQ{{\tens{Q}}}
+\def\tR{{\tens{R}}}
+\def\tS{{\tens{S}}}
+\def\tT{{\tens{T}}}
+\def\tU{{\tens{U}}}
+\def\tV{{\tens{V}}}
+\def\tW{{\tens{W}}}
+\def\tX{{\tens{X}}}
+\def\tY{{\tens{Y}}}
+\def\tZ{{\tens{Z}}}
+
+
+% Graph
+\def\gA{{\mathcal{A}}}
+\def\gB{{\mathcal{B}}}
+\def\gC{{\mathcal{C}}}
+\def\gD{{\mathcal{D}}}
+\def\gE{{\mathcal{E}}}
+\def\gF{{\mathcal{F}}}
+\def\gG{{\mathcal{G}}}
+\def\gH{{\mathcal{H}}}
+\def\gI{{\mathcal{I}}}
+\def\gJ{{\mathcal{J}}}
+\def\gK{{\mathcal{K}}}
+\def\gL{{\mathcal{L}}}
+\def\gM{{\mathcal{M}}}
+\def\gN{{\mathcal{N}}}
+\def\gO{{\mathcal{O}}}
+\def\gP{{\mathcal{P}}}
+\def\gQ{{\mathcal{Q}}}
+\def\gR{{\mathcal{R}}}
+\def\gS{{\mathcal{S}}}
+\def\gT{{\mathcal{T}}}
+\def\gU{{\mathcal{U}}}
+\def\gV{{\mathcal{V}}}
+\def\gW{{\mathcal{W}}}
+\def\gX{{\mathcal{X}}}
+\def\gY{{\mathcal{Y}}}
+\def\gZ{{\mathcal{Z}}}
+
+% Sets
+\def\sA{{\mathbb{A}}}
+\def\sB{{\mathbb{B}}}
+\def\sC{{\mathbb{C}}}
+\def\sD{{\mathbb{D}}}
+% Don't use a set called E, because this would be the same as our symbol
+% for expectation.
+\def\sF{{\mathbb{F}}}
+\def\sG{{\mathbb{G}}}
+\def\sH{{\mathbb{H}}}
+\def\sI{{\mathbb{I}}}
+\def\sJ{{\mathbb{J}}}
+\def\sK{{\mathbb{K}}}
+\def\sL{{\mathbb{L}}}
+\def\sM{{\mathbb{M}}}
+\def\sN{{\mathbb{N}}}
+\def\sO{{\mathbb{O}}}
+\def\sP{{\mathbb{P}}}
+\def\sQ{{\mathbb{Q}}}
+\def\sR{{\mathbb{R}}}
+\def\sS{{\mathbb{S}}}
+\def\sT{{\mathbb{T}}}
+\def\sU{{\mathbb{U}}}
+\def\sV{{\mathbb{V}}}
+\def\sW{{\mathbb{W}}}
+\def\sX{{\mathbb{X}}}
+\def\sY{{\mathbb{Y}}}
+\def\sZ{{\mathbb{Z}}}
+
+% Entries of a matrix
+\def\emLambda{{\Lambda}}
+\def\emA{{A}}
+\def\emB{{B}}
+\def\emC{{C}}
+\def\emD{{D}}
+\def\emE{{E}}
+\def\emF{{F}}
+\def\emG{{G}}
+\def\emH{{H}}
+\def\emI{{I}}
+\def\emJ{{J}}
+\def\emK{{K}}
+\def\emL{{L}}
+\def\emM{{M}}
+\def\emN{{N}}
+\def\emO{{O}}
+\def\emP{{P}}
+\def\emQ{{Q}}
+\def\emR{{R}}
+\def\emS{{S}}
+\def\emT{{T}}
+\def\emU{{U}}
+\def\emV{{V}}
+\def\emW{{W}}
+\def\emX{{X}}
+\def\emY{{Y}}
+\def\emZ{{Z}}
+\def\emSigma{{\Sigma}}
+
+% entries of a tensor
+% Same font as tensor, without \bm wrapper
+\newcommand{\etens}[1]{\mathsfit{#1}}
+\def\etLambda{{\etens{\Lambda}}}
+\def\etA{{\etens{A}}}
+\def\etB{{\etens{B}}}
+\def\etC{{\etens{C}}}
+\def\etD{{\etens{D}}}
+\def\etE{{\etens{E}}}
+\def\etF{{\etens{F}}}
+\def\etG{{\etens{G}}}
+\def\etH{{\etens{H}}}
+\def\etI{{\etens{I}}}
+\def\etJ{{\etens{J}}}
+\def\etK{{\etens{K}}}
+\def\etL{{\etens{L}}}
+\def\etM{{\etens{M}}}
+\def\etN{{\etens{N}}}
+\def\etO{{\etens{O}}}
+\def\etP{{\etens{P}}}
+\def\etQ{{\etens{Q}}}
+\def\etR{{\etens{R}}}
+\def\etS{{\etens{S}}}
+\def\etT{{\etens{T}}}
+\def\etU{{\etens{U}}}
+\def\etV{{\etens{V}}}
+\def\etW{{\etens{W}}}
+\def\etX{{\etens{X}}}
+\def\etY{{\etens{Y}}}
+\def\etZ{{\etens{Z}}}
+
+% The true underlying data generating distribution
+\newcommand{\pdata}{p_{\rm{data}}}
+% The empirical distribution defined by the training set
+\newcommand{\ptrain}{\hat{p}_{\rm{data}}}
+\newcommand{\Ptrain}{\hat{P}_{\rm{data}}}
+% The model distribution
+\newcommand{\pmodel}{p_{\rm{model}}}
+\newcommand{\Pmodel}{P_{\rm{model}}}
+\newcommand{\ptildemodel}{\tilde{p}_{\rm{model}}}
+% Stochastic autoencoder distributions
+\newcommand{\pencode}{p_{\rm{encoder}}}
+\newcommand{\pdecode}{p_{\rm{decoder}}}
+\newcommand{\precons}{p_{\rm{reconstruct}}}
+
+\newcommand{\laplace}{\mathrm{Laplace}} % Laplace distribution
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Ls}{\mathcal{L}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\emp}{\tilde{p}}
+\newcommand{\lr}{\alpha}
+\newcommand{\reg}{\lambda}
+\newcommand{\rect}{\mathrm{rectifier}}
+\newcommand{\softmax}{\mathrm{softmax}}
+\newcommand{\sigmoid}{\sigma}
+\newcommand{\softplus}{\zeta}
+\newcommand{\KL}{D_{\mathrm{KL}}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\standarderror}{\mathrm{SE}}
+\newcommand{\Cov}{\mathrm{Cov}}
+% Wolfram Mathworld says $L^2$ is for function spaces and $\ell^2$ is for vectors
+% But then they seem to use $L^2$ for vectors throughout the site, and so does
+% wikipedia.
+\newcommand{\normlzero}{L^0}
+\newcommand{\normlone}{L^1}
+\newcommand{\normltwo}{L^2}
+\newcommand{\normlp}{L^p}
+\newcommand{\normmax}{L^\infty}
+
+\newcommand{\parents}{Pa} % See usage in notation.tex. Chosen to match Daphne's book.
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\Tr}{Tr}
+\let\ab\allowbreak
+
+$$
+
+</div>
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/temp_masthead.jpg" alt="Transient Verdigris"></a>
+        
+        <a class="site-title" href="/">
+          Transient Verdigris
+          <span class="site-subtitle">memories in green</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/">Root</a>
+            </li><li class="masthead__menu-item">
+              <a href="/leaves/year">Leaves</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Root</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">LaTex Math Notations</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="LaTex Math Notations">
+    <meta itemprop="description" content="This document provides the notation used in the Deep Learning Book, and is highly based on this LaTex file. You can refer to the source of this post for the latex commands.">
+    <meta itemprop="datePublished" content="2021-07-17T00:00:00-04:00">
+    <meta itemprop="dateModified" content="2021-12-19T10:39:14-05:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">LaTex Math Notations
+</h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-07-17T00:00:00-04:00">July 17, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#numbers-and-arrays">Numbers and Arrays</a></li><li><a href="#sets-and-graphs">Sets and Graphs</a></li><li><a href="#indexing">Indexing</a></li><li><a href="#linear-algebra-operations">Linear Algebra Operations</a></li><li><a href="#calculus">Calculus</a></li><li><a href="#probability-and-information-theory">Probability and Information Theory</a></li><li><a href="#functions">Functions</a></li><li><a href="#datasets-and-distributions">Datasets and Distributions</a></li><li><a href="#final-notes">Final Notes</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>This document provides the notation used in the <a href="https://www.deeplearningbook.org/">Deep Learning Book</a>, and is highly based on this <a href="https://github.com/goodfeli/dlbook_notation/blob/master/notation.tex">LaTex file</a>. You can refer to the source of this post for the latex commands.</p>
+
+<!--more-->
+
+<h2 id="numbers-and-arrays">Numbers and Arrays</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>\(\displaystyle a\)</td>
+      <td>A scalar (integer or real)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \va\)</td>
+      <td>A vector</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \mA\)</td>
+      <td>A matrix</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \tA\)</td>
+      <td>A tensor</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \mI_n\)</td>
+      <td>Identity matrix with \(n\) rows and \(n\) columns</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \mI\)</td>
+      <td>Identity matrix with dimensionality implied by context</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \ve^{(i)}\)</td>
+      <td>Standard basis vector \([0,\dots,0,1,0,\dots,0]\) with a 1 at position \(i\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \text{diag}(\va)\)</td>
+      <td>A square, diagonal matrix with diagonal entries given by \(\va\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \ra\)</td>
+      <td>A scalar random variable</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \rva\)</td>
+      <td>A vector-valued random variable</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \rmA\)</td>
+      <td>A matrix-valued random variable</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="sets-and-graphs">Sets and Graphs</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>\(\displaystyle \sA\)</td>
+      <td>A set</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \R\)</td>
+      <td>The set of real numbers</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \{0, 1\}\)</td>
+      <td>The set containing 0 and 1</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \{0, 1, \dots, n \}\)</td>
+      <td>The set of all integers between \(0\) and \(n\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle [a, b]\)</td>
+      <td>The real interval including \(a\) and \(b\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle (a, b]\)</td>
+      <td>The real interval excluding \(a\) but including \(b\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \sA \backslash \sB\)</td>
+      <td>Set subtraction, i.e., the set containing the elements of \(\sA\) that are not in \(\sB\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \gG\)</td>
+      <td>A graph</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \parents_\gG(\ervx_i)\)</td>
+      <td>The parents of \(\ervx_i\) in \(\gG\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="indexing">Indexing</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>\(\displaystyle \eva_i\)</td>
+      <td>Element \(i\) of vector \(\va\), with indexing starting at 1</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \eva_{-i}\)</td>
+      <td>All elements of vector \(\va\) except for element \(i\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \emA_{i,j}\)</td>
+      <td>Element \(i, j\) of matrix \(\mA\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \mA_{i, :}\)</td>
+      <td>Row \(i\) of matrix \(\mA\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \mA_{:, i}\)</td>
+      <td>Column \(i\) of matrix \(\mA\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \etA_{i, j, k}\)</td>
+      <td>Element \((i, j, k)\) of a 3-D tensor \(\tA\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \tA_{:, :, i}\)</td>
+      <td>2-D slice of a 3-D tensor</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \erva_i\)</td>
+      <td>Element \(i\) of the random vector \(\rva\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="linear-algebra-operations">Linear Algebra Operations</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>\(\displaystyle \mA^\top\)</td>
+      <td>Transpose of matrix \(\mA\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \mA^+\)</td>
+      <td>Moore-Penrose pseudoinverse of \(\mA\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \mA \odot \mB\)</td>
+      <td>Element-wise (Hadamard) product of \(\mA\) and \(\mB\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \mathrm{det}(\mA)\)</td>
+      <td>Determinant of \(\mA\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="calculus">Calculus</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>\(\displaystyle\frac{d y} {d x}\)</td>
+      <td>Derivative of \(y\) with respect to \(x\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \frac{\partial y} {\partial x}\)</td>
+      <td>Partial derivative of \(y\) with respect to \(x\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \nabla_\vx y\)</td>
+      <td>Gradient of \(y\) with respect to \(\vx\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \nabla_\mX y\)</td>
+      <td>Matrix derivatives of \(y\) with respect to \(\mX\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \nabla_\tX y\)</td>
+      <td>Tensor containing derivatives of \(y\) with respect to \(\tX\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \frac{\partial f}{\partial \vx}\)</td>
+      <td>Jacobian matrix \(\mJ \in \R^{m\times n}\) of \(f: \R^n \rightarrow \R^m\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \nabla_\vx^2 f(\vx)\text{ or }\mH( f)(\vx)\)</td>
+      <td>The Hessian matrix of \(f\) at input point \(\vx\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \int f(\vx) d\vx\)</td>
+      <td>Definite integral over the entire domain of \(\vx\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \int_\sS f(\vx) d\vx\)</td>
+      <td>Definite integral with respect to \(\vx\) over the set \(\sS\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="probability-and-information-theory">Probability and Information Theory</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>\(\displaystyle \ra \bot \rb\)</td>
+      <td>The random variables \(\ra\) and \(\rb\) are independent</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \ra \bot \rb \mid \rc\)</td>
+      <td>They are conditionally independent given \(\rc\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle P(\ra)\)</td>
+      <td>A probability distribution over a discrete variable</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle p(\ra)\)</td>
+      <td>A probability distribution over a continuous variable, or over a variable whose type has not been specified</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \ra \sim P\)</td>
+      <td>Random variable \(\ra\) has distribution \(P\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle  \E_{\rx\sim P} [ f(x) ]\text{ or } \E f(x)\)</td>
+      <td>Expectation of \(f(x)\) with respect to \(P(\rx)\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \Var(f(x))\)</td>
+      <td>Variance of \(f(x)\) under \(P(\rx)\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \Cov(f(x),g(x))\)</td>
+      <td>Covariance of \(f(x)\) and \(g(x)\) under \(P(\rx)\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle H(\rx)\)</td>
+      <td>Shannon entropy of the random variable \(\rx\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \KL ( P \Vert Q )\)</td>
+      <td>Kullback-Leibler divergence of P and Q</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \mathcal{N} ( \vx ; \vmu , \mSigma)\)</td>
+      <td>Gaussian distribution over \(\vx\) with mean \(\vmu\) and covariance \(\mSigma\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="functions">Functions</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>\(\displaystyle f: \sA \rightarrow \sB\)</td>
+      <td>The function \(f\) with domain \(\sA\) and range \(\sB\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle f \circ g\)</td>
+      <td>Composition of the functions \(f\) and \(g\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle f(\vx ; \vtheta)\)</td>
+      <td>A function of \(\vx\) parametrized by \(\vtheta\). (Sometimes we write \(f(\vx)\) and omit the argument \(\vtheta\) to lighten notation)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \log x\)</td>
+      <td>Natural logarithm of \(x\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \sigma(x)\)</td>
+      <td>Logistic sigmoid, \(\displaystyle \frac{1} {1 + \exp(-x)}\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \zeta(x)\)</td>
+      <td>Softplus, \(\log(1 + \exp(x))\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \vert\vert \vx \vert\vert_p\)</td>
+      <td>\(\normlp\) norm of \(\vx\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \vert\vert \vx \vert\vert\)</td>
+      <td>\(\normltwo\) norm of \(\vx\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle x^+\)</td>
+      <td>Positive part of \(x\), i.e., \(\max(0,x)\)</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \1_\mathrm{condition}\)</td>
+      <td>is 1 if the condition is true, 0 otherwise</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Sometimes we use a function \(f\) whose argument is a scalar but apply
+it to a vector, matrix, or tensor: \(f(\vx)\), \(f(\mX)\), or \(f(\tX)\).
+This denotes the application of \(f\) to the
+array element-wise. For example, if \(\tC = \sigma(\tX)\), then \(\etC_{i,j,k} = \sigma(\etX_{i,j,k})\)
+for all valid values of \(i\), \(j\) and \(k\).</p>
+
+<h2 id="datasets-and-distributions">Datasets and Distributions</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>\(\displaystyle \pdata\)</td>
+      <td>The data generating distribution</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \ptrain\)</td>
+      <td>The empirical distribution defined by the training set</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \sX\)</td>
+      <td>A set of training examples</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \vx^{(i)}\)</td>
+      <td>The \(i\)-th example (input) from a dataset</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle y^{(i)}\text{ or }\vy^{(i)}\)</td>
+      <td>The target associated with \(\vx^{(i)}\) for supervised learning</td>
+    </tr>
+    <tr>
+      <td>\(\displaystyle \mX\)</td>
+      <td>The \(m \times n\) matrix with input example \(\vx^{(i)}\) in row \(\mX_{i,:}\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="final-notes">Final Notes</h2>
+
+<p>For using these commands, your post should have the following yaml config in the beginning of your markdown file:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">dlbook_notation</span><span class="pi">:</span> <span class="no">true</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>Due to the compatibility issue between Kramdown and Mathjax, You should not use the condition symbol (<code class="language-plaintext highlighter-rouge">|</code>) directly (kramdown table synyax), use the escaped text (<code class="language-plaintext highlighter-rouge">\vert</code>) instead. Furthermore, you will want to use double dollar sign (<code class="language-plaintext highlighter-rouge">$$...$$</code>) for most of your math notations, since single dollar sign (<code class="language-plaintext highlighter-rouge">$...$</code>) may have some conflict with kramdown. (e.g., underscore need to be escaped with <code class="language-plaintext highlighter-rouge">\_</code>)</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-12-19">December 19, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=LaTex+Math+Notations%20http%3A%2F%2Flocalhost%3A4000%2Flatex-math-notations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Flatex-math-notations%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Flatex-math-notations%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/math/styling-syntax-test/" class="pagination--pager" title="Styling Syntax Test
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h4 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/math/styling-syntax-test/" rel="permalink">Styling Syntax Test
+</a>
+      
+    </h4>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2020-10-25T00:00:00-04:00">October 25, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">In this document, we’ll showcase some commonly used features that Jekyll can achieve in a generated website. All of them can work out-of-the-box if you forke...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/transverd" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://instagram.com/transverd" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 Transient Verdigris. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+<!-- MathJax -->
+<script src="/assets/js/mathjax-config.js"></script>
+<script id="MathJax-script" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.min.js">
+</script>
+
+
+
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    
+  <script>
+    (function ($) {
+    $('#new_comment').submit(function () {
+      var form = this;
+
+      $(form).addClass('disabled');
+      $('#comment-form-submit').html('<i class="fas fa-spinner fa-spin fa-fw"></i> Loading...');
+
+      $.ajax({
+        type: $(this).attr('method'),
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        contentType: 'application/x-www-form-urlencoded',
+        success: function (data) {
+          $('#comment-form-submit').html('Submitted');
+          $('.page__comments-form .js-notice').removeClass('notice--danger');
+          $('.page__comments-form .js-notice').addClass('notice--success');
+          showAlert('Thanks for your comment! It will show on the site once it has been approved.');
+        },
+        error: function (err) {
+          console.log(err);
+          $('#comment-form-submit').html('Submit comment');
+          $('.page__comments-form .js-notice').removeClass('notice--success');
+          $('.page__comments-form .js-notice').addClass('notice--danger');
+          showAlert('Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.');
+          $(form).removeClass('disabled');
+        }
+      });
+
+      return false;
+    });
+
+    function showAlert(message) {
+      $('.page__comments-form .js-notice').removeClass('hidden');
+      $('.page__comments-form .js-notice-text').html(message);
+    }
+  })(jQuery);
+  </script>
+
+
+  
+
+
+
+
+
+  </body>
+</html>
