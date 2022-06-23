@@ -25,7 +25,7 @@ url                      : "https://tshu.github.io" # the base hostname & protoc
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "tshu/tshu.github.io" # Git username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/temp_masthead.jpg" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "/assets/images/transverd_hourglass_100x100.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 300
@@ -81,7 +81,7 @@ social:
 
 # Analytics
 analytics:
-  provider               : google # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
     tracking_id          : "G-9X2H1RWDNH"
     anonymize_ip         : # true, false (default)

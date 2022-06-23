@@ -37,4 +37,4 @@ author:
 
 It is often the case that complex relationships have simpler, closed-form representations. The skilled scientist *understands* which ingredients to cherry-pick from a manuscript to support their hypothesis. An astute sailor recognizes a puff of wind in the distance and *knows* how to trim their sails accordingly. The mental models we build allow us to robustly navigate our world despite its enormous, unobservable complexity.
 
-The ideas presented here are intended as abstract tools for improving our environment, our discernment, and ourselves.
+Any ideas presented here are intended as abstract tools for improving our environment, our discernment, and ourselves.
