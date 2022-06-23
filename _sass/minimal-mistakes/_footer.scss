@@ -1,6 +1,21 @@
 /* ==========================================================================
    FOOTER
    ========================================================================== */
+.float-container {
+
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+}  
+
+.float-child-left {
+  width: 50%;
+  float: left;
+  // margin-top: 8%;
+}  
+
 
 .page__footer {
   @include clearfix;
@@ -49,6 +64,7 @@
 .page__footer-copyright {
   font-family: $sans-serif;
   font-size: $type-size-7;
+  margin-top: 10%;
 }
 
 .page__footer-follow {

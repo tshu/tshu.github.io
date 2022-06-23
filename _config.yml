@@ -62,7 +62,7 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : "transverd"
 facebook:
   username               :
   app_id                 :
@@ -74,12 +74,16 @@ social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+    - "https://twitter.com/transverd"
+    - "https://www.facebook.com/transverd"
+    - "https://www.instagram.com/transverd/"
+
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : google # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "G-9X2H1RWDNH"
     anonymize_ip         : # true, false (default)
 
 

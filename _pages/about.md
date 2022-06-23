@@ -12,9 +12,12 @@ author:
   name             : 
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : 
-  location         : "Somewhere"
-  email            : transverd@mit.edu
+  location         : 
+  email            : 
   links:
+    - label: "Contact"
+      icon : "fas fa-fw fa-envelope-square"
+      url  : "mailto:transverd@mit.edu"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
