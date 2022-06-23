@@ -10,13 +10,6 @@
     float: left;
 }  
 
-.float-child-left {
-  width: 50%;
-  float: left;
-  // margin-top: 8%;
-}  
-
-
 .page__footer {
   @include clearfix;
   float: left;
