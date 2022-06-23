@@ -37,8 +37,8 @@ comments:
     endpoint  : "https://tv-staticman.herokuapp.com/v3/entry/github/"
 
 reCaptcha:
-  siteKey                :
-  secret                 :
+  siteKey                : 6LcsDJIgAAAAANoDI3ec_q0fZYjHm78DIGzoHT6I
+  secret                 : "aUNUUtgsUXk2Y7SZDh8kBKVN8UHfK1GOoKk362tH6QhDPe5lAmOtnrceytBbuTHWFHRBnPSRFasYnJifkZc16Fqj4SSkFxmooGRrvRISBPTOAF/L3kPuQo5XdHptN4hIVVQNjAP6Z9zkrKRjgFjioIOe/llnTcxip+gJslxmGibjQQqVMjKctcu9vkKLRep6IKaH1tbvAmJlrGVl9GAYNNccYMUWczksuutCMzdrrQRT2g1AaI8bkCuTTt7acZfatnjoAeVIp9m0ZQjQ68FVol6kgRx+GO1Ta5VofT2BcTu3rdOfF06Ypm/OboAoHoM6KpFQl55vH4FGxwhT4jJ7tQ=="
 atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true # true, false (default)
