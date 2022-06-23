@@ -1,6 +1,6 @@
 ---
 title: "Sort by Year"
-permalink: /leaves/year
+permalink: /leaves/year/
 layout: posts
 author_profile: false
 ---
