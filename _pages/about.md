@@ -15,7 +15,7 @@ author:
   location         : 
   email            : 
   links:
-    - label: "Contact"
+    - label: "Email"
       icon : "fas fa-fw fa-envelope-square"
       url  : "mailto:transverd@mit.edu"
     - label: "Website"
@@ -38,3 +38,19 @@ author:
 It is often the case that complex relationships have simpler, closed-form representations. The skilled scientist *understands* which ingredients to cherry-pick from a manuscript to support their hypothesis. An astute sailor recognizes a puff of wind in the distance and *knows* how to trim their sails accordingly. The mental models we build allow us to robustly navigate our world despite its enormous, unobservable complexity.
 
 Any ideas presented here are intended as abstract tools for improving our environment, our discernment, and ourselves.
+
+<div>
+filler filler filler
+  <wow-tooltip class="tooltip">
+    <div class="tooltip__label" aria-describedby="tooltip-demo-content" data-tooltip-placeholder>
+      tooltip
+    </div>
+    <div class="tooltip-dropdown" data-tooltip-dropdown>
+      <div role="tooltip" id="tooltip-demo-content" class="tooltip-dropdown__content tooltip-body">
+        It is a long established fact that a reader will be
+        <strong>distracted</strong>
+        by the readable content of a page when looking at its layout.
+      </div>
+      </div>
+  </wow-tooltip>
+  </div>

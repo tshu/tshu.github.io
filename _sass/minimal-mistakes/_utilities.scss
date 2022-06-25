@@ -595,3 +595,79 @@ a.reversefootnote {
     position: static;
   }
 }
+
+/*
+   Tooltips on hover
+   ========================================================================== */
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* unused, used to be body */
+.tooltip-pad {
+  padding: 16px;
+}
+
+.tooltip {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #354B45;
+  border-bottom: 1px dotted;
+  position: relative;
+}
+
+.tooltip__label {
+  &:before { // for the help cursor
+    content: '';
+    display: flex;
+    cursor: help;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+}
+
+.tooltip-dropdown {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  padding-top: 32px;
+}
+
+.tooltip-dropdown__content {
+  color: #fefcfc;
+  background-color: #40514e;
+  font-family: $serif;
+  border-radius: 4px;
+  padding: 8px 0px 8px 12px;
+  width: 300px;
+  text-align: left;
+}
+
+.tooltip--open {
+  .tooltip-dropdown {
+    animation: tooltipFadeIn 0.10s;
+    display: block;
+  }
+}
+
+@media (hover: hover) {
+  .tooltip:hover {
+    .tooltip-dropdown {
+      animation: tooltipFadeIn 0.10s;
+      display: block;
+    }
+  }
+}
