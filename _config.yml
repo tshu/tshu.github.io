@@ -203,6 +203,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-scholar
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -212,7 +213,10 @@ whitelist:
   - jekyll-feed
   - jekyll-include-cache
 
-
+scholar:
+  style: ieee
+  source: _bibliography/
+  
 # Archives
 #  Type
 #  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
