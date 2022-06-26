@@ -21,7 +21,7 @@ title_separator          : "|"
 subtitle                 : "memories in green" # site tagline that appears below site title in masthead
 name                     : "Transient Verdigris"
 description              : "Tools and patterns for our short stay on Earth"
-url                      : "https://tshu.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "transverd.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "tshu/tshu.github.io" # Git username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"

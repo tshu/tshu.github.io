@@ -460,3 +460,20 @@ Content
 ## Final Notes
 
 Due to the compatibility issue between Kramdown and Mathjax, You should not use the condition symbol (`|`) directly (kramdown table synyax), use the escaped text (`\vert`) instead. Furthermore, you will want to use double dollar sign (`$$...$$`) for most of your math notations, since single dollar sign (`$...$`) may have some conflict with kramdown. (e.g., underscore need to be escaped with `\_`)
+
+<div>
+The paragraph containing the tooltip needs to go in this section of the div.
+  <wow-tooltip class="tooltip">
+    <div class="tooltip__label" aria-describedby="tooltip-demo-content" data-tooltip-placeholder>
+      tooltip
+    </div>
+    <div class="tooltip-dropdown" data-tooltip-dropdown>
+      <div role="tooltip" id="tooltip-demo-content" class="tooltip-dropdown__content tooltip-body">
+        It is a long established fact that a reader will be
+        <strong>distracted</strong>
+        by the readable content of a page when looking at its layout.
+      </div>
+      </div>
+  </wow-tooltip>
+The paragraph containing the tooltip needs to go in this section of the div.
+</div>

@@ -1,3 +1,20 @@
+{/* <div>
+The paragraph containing the tooltip needs to go in this section of the div.
+  <wow-tooltip class="tooltip">
+    <div class="tooltip__label" aria-describedby="tooltip-demo-content" data-tooltip-placeholder>
+      tooltip
+    </div>
+    <div class="tooltip-dropdown" data-tooltip-dropdown>
+      <div role="tooltip" id="tooltip-demo-content" class="tooltip-dropdown__content tooltip-body">
+        It is a long established fact that a reader will be
+        <strong>distracted</strong>
+        by the readable content of a page when looking at its layout.
+      </div>
+      </div>
+  </wow-tooltip>
+The paragraph containing the tooltip needs to go in this section of the div.
+</div> */}
+
 class Tooltip extends HTMLElement {
   connectedCallback() {
     this.setup();
@@ -51,7 +68,7 @@ class Tooltip extends HTMLElement {
 
 function dismissAllTooltips(event) {
   if (typeof event.target.closest !== 'function') return;
-  const currentTooltip = event.target.closest('carwow-tooltip');
+  const currentTooltip = event.target.closest('wow-tooltip');
 
   document.querySelectorAll('.tooltip--open').forEach(tooltip => {
     if (tooltip === currentTooltip) return;

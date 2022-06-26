@@ -647,8 +647,8 @@ a.reversefootnote {
 }
 
 .tooltip-dropdown__content {
-  color: #fefcfc;
-  background-color: #40514e;
+  color: $background-color;
+  background-color: $muted-text-color;
   font-family: $serif;
   border-radius: 4px;
   padding: 8px 0px 8px 12px;
