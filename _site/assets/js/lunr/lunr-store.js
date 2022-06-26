@@ -6,7 +6,7 @@ var store = [{
         "teaser": null
       },{
         "title": "LaTex Math Notations",
-        "excerpt":"This document provides the notation used in the Deep Learning Book, and is highly based on this LaTex file. You can refer to the source of this post for the latex commands. Numbers and Arrays \\(\\displaystyle a\\) A scalar (integer or real) \\(\\displaystyle \\va\\) A vector \\(\\displaystyle \\mA\\) A matrix...","categories": [],
+        "excerpt":"This document provides the notation used in the Deep Learning Book, and is highly based on this LaTex file. You can refer to the source of this post for the latex commands [1]. Numbers and Arrays \\(\\displaystyle a\\) A scalar (integer or real) \\(\\displaystyle \\va\\) A vector \\(\\displaystyle \\mA\\) A...","categories": [],
         "tags": [],
         "url": "/latex-math-notations/",
         "teaser": null

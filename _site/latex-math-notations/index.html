@@ -6,11 +6,14 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 <html lang="en" class="no-js">
+  
+  <style>ol.bibliography li { list-style: none }</style>
+
   <head>
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>LaTex Math Notations | Transient Verdigris</title>
-<meta name="description" content="This document provides the notation used in the Deep Learning Book, and is highly based on this LaTex file. You can refer to the source of this post for the latex commands.">
+<meta name="description" content="This document provides the notation used in the Deep Learning Book, and is highly based on this LaTex file. You can refer to the source of this post for the latex commands [1].">
 
 
   <meta name="author" content="Your Name">
@@ -26,7 +29,7 @@
 <meta property="og:url" content="transverd.com/latex-math-notations/">
 
 
-  <meta property="og:description" content="This document provides the notation used in the Deep Learning Book, and is highly based on this LaTex file. You can refer to the source of this post for the latex commands.">
+  <meta property="og:description" content="This document provides the notation used in the Deep Learning Book, and is highly based on this LaTex file. You can refer to the source of this post for the latex commands [1].">
 
 
 
@@ -34,7 +37,7 @@
 
   <meta name="twitter:site" content="@transverd">
   <meta name="twitter:title" content="LaTex Math Notations">
-  <meta name="twitter:description" content="This document provides the notation used in the Deep Learning Book, and is highly based on this LaTex file. You can refer to the source of this post for the latex commands.">
+  <meta name="twitter:description" content="This document provides the notation used in the Deep Learning Book, and is highly based on this LaTex file. You can refer to the source of this post for the latex commands [1].">
   <meta name="twitter:url" content="transverd.com/latex-math-notations/">
 
   
@@ -726,7 +729,7 @@ $$
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="LaTex Math Notations">
-    <meta itemprop="description" content="This document provides the notation used in the Deep Learning Book, and is highly based on this LaTex file. You can refer to the source of this post for the latex commands.">
+    <meta itemprop="description" content="This document provides the notation used in the Deep Learning Book, and is highly based on this LaTex file. You can refer to the source of this post for the latex commands [1].">
     <meta itemprop="datePublished" content="2021-07-17T00:00:00-04:00">
     <meta itemprop="dateModified" content="2021-12-19T10:39:14-05:00">
 
@@ -776,7 +779,7 @@ $$
             </nav>
           </aside>
         
-        <p>This document provides the notation used in the <a href="https://www.deeplearningbook.org/">Deep Learning Book</a>, and is highly based on this <a href="https://github.com/goodfeli/dlbook_notation/blob/master/notation.tex">LaTex file</a>. You can refer to the source of this post for the latex commands.</p>
+        <p>This document provides the notation used in the <a href="https://www.deeplearningbook.org/">Deep Learning Book</a>, and is highly based on this <a href="https://github.com/goodfeli/dlbook_notation/blob/master/notation.tex">LaTex file</a>. You can refer to the source of this post for the latex commands <a class="citation" href="#ruby">[1]</a>.</p>
 
 <!--more-->
 
@@ -1124,6 +1127,8 @@ for all valid values of \(i\), \(j\) and \(k\).</p>
 </code></pre></div></div>
 
 <p>Due to the compatibility issue between Kramdown and Mathjax, You should not use the condition symbol (<code class="language-plaintext highlighter-rouge">|</code>) directly (kramdown table synyax), use the escaped text (<code class="language-plaintext highlighter-rouge">\vert</code>) instead. Furthermore, you will want to use double dollar sign (<code class="language-plaintext highlighter-rouge">$$...$$</code>) for most of your math notations, since single dollar sign (<code class="language-plaintext highlighter-rouge">$...$</code>) may have some conflict with kramdown. (e.g., underscore need to be escaped with <code class="language-plaintext highlighter-rouge">\_</code>)</p>
+
+<ol class="bibliography"><li><span id="ruby">[1]D. Flanagan and Y. Matsumoto, <i>The Ruby Programming Language</i>. O’Reilly Media, 2008.</span></li></ol>
 
         
       </section>
