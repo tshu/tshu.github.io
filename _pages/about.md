@@ -6,7 +6,7 @@ categories: intro
 author_profile: true
 
 header:
-  image: /assets/images/window_roots_wide.jpg
+  image: /assets/images/lake_reflection.jpg
 
 author:
   name             : 
@@ -34,7 +34,19 @@ author:
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
 ---
+<div>
+It is often the case that complex relationships have simpler, closed-form representations. While representations themselves may be conferred through mathematical symbology, visual diagrams, or sensory experience, their subjective meanings exist in our  
+<wow-tooltip class="tooltip"> 
+    <div class="tooltip__label" aria-describedby="tooltip-demo-content" data-tooltip-placeholder>
+      wetware
+    </div>
+    <div class="tooltip-dropdown" data-tooltip-dropdown>
+      <div role="tooltip" id="tooltip-demo-content" class="tooltip-dropdown__content tooltip-body">
+        (n.) human brain cells or thought processes regarded as analogous to, or in contrast with, computer systems
+      </div>
+      </div>
+</wow-tooltip>
+independently of transference medium. This rich set of resultant mental models allows us to robustly navigate the world despite its enormous, unobservable complexity.
+</div>
 
-It is often the case that complex relationships have simpler, closed-form representations. These mental models allow us to robustly navigate our world despite its enormous, unobservable complexity.
-
-Ideas presented here are intended as abstract tools for improving our environment, our discernment, and ourselves.
+Ideas presented here are intended as lenses for resolving our environment, our discernment, and ourselves.

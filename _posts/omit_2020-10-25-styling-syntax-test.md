@@ -462,8 +462,8 @@ Content
 Due to the compatibility issue between Kramdown and Mathjax, You should not use the condition symbol (`|`) directly (kramdown table synyax), use the escaped text (`\vert`) instead. Furthermore, you will want to use double dollar sign (`$$...$$`) for most of your math notations, since single dollar sign (`$...$`) may have some conflict with kramdown. (e.g., underscore need to be escaped with `\_`)
 
 <div>
-The paragraph containing the tooltip needs to go in this section of the div.
-  <wow-tooltip class="tooltip">
+text before $$f(x)=x^2$$ text before 
+<wow-tooltip class="tooltip"> 
     <div class="tooltip__label" aria-describedby="tooltip-demo-content" data-tooltip-placeholder>
       tooltip
     </div>
@@ -474,6 +474,6 @@ The paragraph containing the tooltip needs to go in this section of the div.
         by the readable content of a page when looking at its layout.
       </div>
       </div>
-  </wow-tooltip>
+</wow-tooltip>
 The paragraph containing the tooltip needs to go in this section of the div.
 </div>
