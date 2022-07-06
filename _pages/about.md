@@ -6,7 +6,7 @@ categories: intro
 author_profile: true
 
 header:
-  image: /assets/images/lake_reflection.jpg
+  image: /assets/images/time_mermaid.jpg
 
 author:
   name             : 
