@@ -1,0 +1,109 @@
+.timeline-both-side{
+  float: left; 
+  width: 100%; 
+  margin: 20px 0% 100px; 
+  position: relative; 
+  box-sizing: border-box;
+  padding: 0;
+  list-style-type: none;
+}
+.timeline-both-side:before{
+  background-color: #E95420; 
+  bottom: 0; 
+  content: " "; 
+  left: 50%; 
+  position: absolute; 
+  top: 0; 
+  width: 1px;
+}
+.timeline-both-side:after{
+  border-radius: 50%; 
+  bottom: -16px; 
+  content: ""; 
+  height: 18px; 
+  left: 50%; 
+  margin-left: -9px; 
+  position: absolute; 
+  width: 18px; 
+  border: 2px solid #E95420;
+}
+.timeline-both-side li.default {
+  position: relative; 
+  float: left; 
+  width: 100%;
+}
+
+.timeline-both-side li.opposite-side {
+  position: relative; 
+  float: left; 
+  width: 100%;
+}
+
+.timeline-both-side li.default .border-line{
+  background-color: #ccc; 
+  font-size: 1.4em; 
+  height: 1px; 
+  left: 50%; 
+  margin-left: -9.5%; 
+  position: absolute; 
+  text-align: center; 
+  top: 50%; 
+  width: 9.5%; 
+  z-index: 100;
+}
+.timeline-both-side li.opposite-side .border-line{
+  background-color: #ccc; 
+  font-size: 1.4em; 
+  height: 1px; 
+  left: auto; 
+  right: 50%; 
+  margin-left: 0; 
+  margin-right: -9.5%;
+  position: absolute; 
+  text-align: center; 
+  width: 9.5%; 
+  top: 50%;
+  z-index: 100;
+}
+.timeline-both-side li.default .border-line:before {
+  background-color: #ccc; 
+  content: ""; 
+  height: 7px; 
+  position: absolute; 
+  right: -4px; 
+  top: -3px; 
+  width: 7px;
+}
+.timeline-both-side li.opposite-side .border-line:before{
+  background-color: #ccc; 
+  content: ""; 
+  height: 7px; 
+  position: absolute; 
+  left: -3px; 
+  right: auto;
+  top: -3px; 
+  width: 7px;
+}
+.timeline-both-side li.default .timeline-description{
+  border-radius: 2px; 
+  background-color: #fff; 
+  border: 1px solid #ccc; 
+  float: left; 
+  font-size: 15px; 
+  padding: 9px; 
+  position: relative; 
+  width: 40.5%;
+}
+.timeline-both-side li.opposite-side .timeline-description{
+  float: right;
+  border-radius: 2px; 
+  background-color: #fff; 
+  border: 1px solid #ccc; 
+  font-size: 15px; 
+  padding: 9px; 
+  position: relative; 
+  width: 40.5%;
+}
+
+.timeline-both-side p{
+  margin-bottom: 0rem;
