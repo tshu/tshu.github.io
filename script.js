@@ -125,7 +125,7 @@
   function render(p) {
     const end = { x: p.barX, y: p.barY - 17 * p.S };       // centre of the last link; its inner surface rests on the bar
     const P0 = { x: p.p0x, y: p.p0y };
-    const bulge = -18 * p.S;                               // negative = bows slightly toward the left edge of the screen
+    const bulge = -20 * p.S;                               // negative = bows slightly toward the left edge of the screen
     const P1 = { x: (P0.x + end.x) / 2 + 2 * bulge, y: (P0.y + end.y) / 2 };
 
     const N = 800, pts = [], cum = [0];

@@ -41,7 +41,9 @@ body {
   margin: 0;
   color: var(--ink);
   font: 18px/1.65 var(--serif);
-  padding: calc(1.5rem + env(safe-area-inset-top, 0px)) 1.5rem calc(1.5rem + env(safe-area-inset-bottom, 0px)) var(--gutter);
+  /* No safe-area term at the bottom: on phones it flips between 0 and ~34px as the bottom menu slides in and out, which
+     changed the page height and moved the anchor. The bottom of the page is only sand, so nothing needs protecting there. */
+  padding: calc(1.5rem + env(safe-area-inset-top, 0px)) 1.5rem 1.5rem var(--gutter);
 }
 
 /* Sparse Boston Harbor soundings (feet) with bottom-quality letters */
@@ -248,7 +250,7 @@ h3 { margin: 0 0 .25rem; font: 700 1.05rem/1.35 var(--serif); }
   pointer-events: none;
   transition: opacity .3s ease;
 }
-.pub:hover::after { opacity: 1; transition-duration: .1s; }
+.pub:hover::after { opacity: 1; transition-duration: .2s; }
 .pub[hidden] { display: none; }
 .thumb img, .thumb video {
   width: 100%; height: auto; display: block;
