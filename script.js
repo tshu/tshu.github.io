@@ -40,7 +40,7 @@
 
 
 // Anchor chain: drawn in the left margin, from the height of the About section down to the
-// anchor's eye, in a gentle curve that bulges to the right, staying inside the margin. Links start
+// anchor's eye, in a gentle curve that bows slightly to the left, staying inside the margin. Links start
 // small and transparent and grow larger and more opaque, as if hauled in from a distance through water.
 //
 // When the page changes size (window resize, rotating a phone, filtering the publications), the chain
@@ -84,6 +84,15 @@
     '</g>' +
     '</defs>';
 
+  // Distance from the top of the document to an element, from layout offsets only. Unlike
+  // getBoundingClientRect().top + scrollY it does not depend on the scroll position, which mobile browsers
+  // change while their toolbars slide in and out.
+  function pageTop(el) {
+    let y = 0;
+    while (el) { y += el.offsetTop; el = el.offsetParent; }
+    return y;
+  }
+
   // Where everything should be for the page as it is right now
   function measure() {
     const body = document.body;
@@ -92,7 +101,7 @@
     const ringX = parseFloat(cs.getPropertyValue('--ringx')) || 104;
     const W = body.clientWidth, H = body.offsetHeight;
     const about = document.getElementById('about');
-    const y0 = about ? about.getBoundingClientRect().top + window.scrollY + 6 : 300;
+    const y0 = about ? pageTop(about) + 6 : 300;
     return {
       W: W, H: H, S: S,
       p0x: ringX - 30 * S, p0y: y0,                          // where the chain enters, at the height of About
@@ -116,7 +125,7 @@
   function render(p) {
     const end = { x: p.barX, y: p.barY - 17 * p.S };       // centre of the last link; its inner surface rests on the bar
     const P0 = { x: p.p0x, y: p.p0y };
-    const bulge = 36 * p.S;                                // positive bulge = toward the page content, inside the margin
+    const bulge = -18 * p.S;                               // negative = bows slightly toward the left edge of the screen
     const P1 = { x: (P0.x + end.x) / 2 + 2 * bulge, y: (P0.y + end.y) / 2 };
 
     const N = 800, pts = [], cum = [0];
@@ -203,10 +212,22 @@
     if (moving) rafId = requestAnimationFrame(step);
   }
 
+  // True when two measurements are the same for all practical purposes (sub-pixel noise is ignored)
+  function same(a, b) {
+    return !!a && !!b &&
+      Math.abs(a.W - b.W) < 1 && Math.abs(a.H - b.H) < 1 &&
+      Math.abs(a.p0x - b.p0x) < 0.5 && Math.abs(a.p0y - b.p0y) < 1 &&
+      Math.abs(a.barX - b.barX) < 0.5 && Math.abs(a.barY - b.barY) < 1 &&
+      Math.abs(a.S - b.S) < 0.001;
+  }
+
   // Called whenever the page's size or layout may have changed
   function retarget() {
     ensureSvg();
     const m = measure();
+    // Nothing that matters moved (e.g. a phone's address bar or bottom toolbar sliding in and out only changes the
+    // viewport height): leave the chain exactly as it is, with no re-draw and no animation.
+    if (cur && same(m, tgt)) return;
     if (!cur) {                                            // first draw: no animation
       cur = {}; tgt = m;
       KEYS.forEach(function (key) { cur[key] = m[key]; });
@@ -225,8 +246,14 @@
 
   retarget();
   window.addEventListener('load', retarget);
-  window.addEventListener('resize', retarget);
-  if (window.ResizeObserver) new ResizeObserver(retarget).observe(document.body);   // also fires when filtering changes the page height
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(retarget);   // web fonts can shift the layout
+  if (window.ResizeObserver) {
+    // The page's own size is what matters: this fires when the window is resized, the layout changes at a breakpoint,
+    // or filtering/sorting changes the page height. It does not fire for a mobile toolbar changing the viewport height.
+    new ResizeObserver(retarget).observe(document.body);
+  } else {
+    window.addEventListener('resize', retarget);
+  }
 })();
 
 // "Other" section: sort the dated updates and search them by keyword.

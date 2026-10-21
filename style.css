@@ -222,14 +222,11 @@ h3 { margin: 0 0 .25rem; font: 700 1.05rem/1.35 var(--serif); }
 /* ---------- Publication entry ---------- */
 .pub {
   position: relative;
+  isolation: isolate;          /* keeps the hover wash (::after, z-index -1) behind this entry's content */
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 1.25rem;
   padding: 1.5rem 0;
-  background: linear-gradient(to right, transparent, #fbfbfa 90%, transparent);
-  transition: background-position 0.2s ease-out;
-  background-size: 200% auto;
-  background-position: 170% top;
 }
 .pub::before {
   content: "";
@@ -239,9 +236,19 @@ h3 { margin: 0 0 .25rem; font: 700 1.05rem/1.35 var(--serif); }
   background: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='5' viewBox='0 0 100 5' preserveAspectRatio='none'%3E%3Cpath d='M0 2.5 C30 .5 70 .5 100 2.5 C70 4.5 30 4.5 0 2.5Z' fill='%232e2a25'/%3E%3C/svg%3E") 0 0 / 100% 100% no-repeat;
   opacity: .5;
 }
-.pub:hover {
-  background-position: center center;
+/* Hover wash. A gradient can't be transitioned directly, so it lives on a pseudo-element whose opacity fades:
+   quick fade-in on hover, slow and smooth fade-out when the pointer leaves. */
+.pub::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to right, transparent, #fbfbfa 90%, transparent);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
 }
+.pub:hover::after { opacity: 1; transition-duration: .1s; }
 .pub[hidden] { display: none; }
 .thumb img, .thumb video {
   width: 100%; height: auto; display: block;
@@ -320,5 +327,5 @@ footer {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .thumb img, .thumb video, .update-media img { transition: none; }
+  .thumb img, .thumb video, .update-media img, .pub::after { transition: none; }
 }
