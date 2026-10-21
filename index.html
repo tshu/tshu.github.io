@@ -80,26 +80,29 @@
     <section id="publications">
       <h2>Publications</h2>
 
-      <!-- Selected / All toggle -->
-      <div class="toggle" role="group" aria-label="Publication set">
-        <button type="button" id="btn-selected" class="active">Highlights</button>
-        <button type="button" id="btn-all">All publications</button>
-      </div>
+      <!-- Controls: the Highlights / All buttons and the search bar share one line (wrapping on narrow screens) -->
+      <div class="pub-controls">
+        <!-- Selected / All toggle -->
+        <div class="toggle" role="group" aria-label="Publication set">
+          <button type="button" id="btn-selected" class="active">Highlights</button>
+          <button type="button" id="btn-all">All publications</button>
+        </div>
 
-      <!-- Search and year filter -->
-      <div class="filters">
-        <input type="search" id="search" placeholder="Search publications" aria-label="Search publications">
-        <select id="year" aria-label="Filter by year">
-          <option value="all">All years</option>
-          <option>2026</option>
-          <option>2025</option>
-          <option>2024</option>
-          <option>2022</option>
-          <option>2021</option>
-          <option>2020</option>
-          <option>2019</option>
-          <option>2017</option>
-        </select>
+        <!-- Search and year filter -->
+        <div class="filters">
+          <input type="search" id="search" placeholder="Search publications" aria-label="Search publications">
+          <select id="year" aria-label="Filter by year">
+            <option value="all">All years</option>
+            <option>2026</option>
+            <option>2025</option>
+            <option>2024</option>
+            <option>2022</option>
+            <option>2021</option>
+            <option>2020</option>
+            <option>2019</option>
+            <option>2017</option>
+          </select>
+        </div>
       </div>
 
       <p id="count" class="count"></p>
